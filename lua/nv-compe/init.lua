@@ -1,3 +1,4 @@
+-- Lua Config
 require'compe'.setup {
   enabled = true;
   autocomplete = true;
@@ -22,6 +23,7 @@ require'compe'.setup {
   };
 }
 
+-- Tab to navigate completion menu
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
