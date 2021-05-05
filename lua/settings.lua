@@ -5,10 +5,9 @@ vim.g.hlsearch = false
 vim.g.showmode = false
 vim.g.hidden = true
 vim.g.errorbells = false
-vim.g.laststatus = 2
-vim.g.clipboard = "unnamedplus"
 vim.g.splitbelow = true
 vim.g.splitright = true
+vim.g.updatetime = 100
 
 -- Window
 vim.wo.relativenumber = true
@@ -32,3 +31,4 @@ vim.b.mapleader = " "
 -- Don't know how to
 vim.cmd("highlight ColorColumn ctermbg=0 guibg=none")
 vim.cmd("colorscheme gruvbox")
+vim.cmd("set clipboard=unnamedplus")

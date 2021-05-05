@@ -1,8 +1,4 @@
---[[ nmap <Leader>t :NERDTreeFind<CR>
-
-vmap <Leader>/ <Plug>NERDCommenterToggle
-nmap <Leader>/ <Plug>NERDCommenterToggle
-
+--[[
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -44,3 +40,17 @@ vim.api.nvim_set_keymap("n", "<C-h>", "<C-W><C-H>", options)
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-W><C-J>", options)
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-W><C-K>", options)
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-W><C-L>", options)
+
+-- NerdTree
+vim.api.nvim_set_keymap("n", "<Leader>t", ":NERDTreeFind<CR>", options)
+
+-- Nvim commenter
+vim.api.nvim_set_keymap("n", "<Leader>/", ":CommentToggle<CR>", options)
+vim.api.nvim_set_keymap("v", "<Leader>/", ":CommentToggle<CR>", options)
+
+-- Git gutter
+vim.api.nvim_set_keymap("n", "]h", ":GitGutterNextHunk<CR>", options)
+vim.api.nvim_set_keymap("n", "[h", ":GitGutterPrevHunk<CR>", options)
+
+-- Telescope
+vim.api.nvim_set_keymap("n", "<C-p>", ":Telescope find_files<CR>", options)
