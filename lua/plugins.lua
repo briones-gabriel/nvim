@@ -10,8 +10,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- Plugins list
-return require("packer").startup(
-    function()
-        use "wbthomason/packer.nvim"
-    end
-)
+return require("packer").startup(function()
+    use "wbthomason/packer.nvim"
+    use "gruvbox-community/gruvbox"
+end)

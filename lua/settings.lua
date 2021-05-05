@@ -31,3 +31,4 @@ vim.b.mapleader = " "
 
 -- Don't know how to
 vim.cmd("highlight ColorColumn ctermbg=0 guibg=none")
+vim.cmd("colorscheme gruvbox")
