@@ -34,8 +34,10 @@ require("packer").startup(
         use "kyazdani42/nvim-tree.lua"
         -- Vim Maximizer
         use "szw/vim-maximizer"
-        -- COC
-        use "neoclide/coc.nvim"
+        -- LSP
+        use "neovim/nvim-lspconfig"
+        use "hrsh7th/nvim-compe"
+        use "kabouzeid/nvim-lspinstall"
         -- Treesitter
         use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
     end

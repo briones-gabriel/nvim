@@ -30,6 +30,20 @@ vim.api.nvim_set_keymap("n", "<C-f>", ":Telescope file_browser<CR>", options)
 -- Vim Maximizer
 vim.api.nvim_set_keymap("n", "<Leader>m", ":MaximizerToggle<CR>", options)
 
+-- LSP
+vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", options)
+vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", options)
+vim.api.nvim_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", options)
+vim.api.nvim_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", options)
+vim.api.nvim_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", options)
+
+-- nv-compe
+
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+
 -- Nvim tree
 vim.api.nvim_set_keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", options)
 vim.api.nvim_set_keymap("n", "<Leader>r", ":NvimTreeRefresh<CR>", options)
