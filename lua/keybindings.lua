@@ -1,14 +1,3 @@
---[[
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <leader>rn <Plug>(coc-rename)
-
-nnoremap <Leader>m :MaximizerToggle<CR>
-vnoremap <Leader>m :MaximizerToggle<CR>
-
-]]
-
 local options = { noremap = true, silent = true }
 
 -- Common keybindings
@@ -37,6 +26,9 @@ vim.api.nvim_set_keymap("n", "[h", ":GitGutterPrevHunk<CR>", options)
 -- Telescope
 vim.api.nvim_set_keymap("n", "<C-p>", ":Telescope find_files<CR>", options)
 vim.api.nvim_set_keymap("n", "<C-f>", ":Telescope file_browser<CR>", options)
+
+-- Vim Maximizer
+vim.api.nvim_set_keymap("n", "<Leader>m", ":MaximizerToggle<CR>", options)
 
 -- Nvim tree
 vim.api.nvim_set_keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", options)

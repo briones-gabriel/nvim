@@ -15,13 +15,13 @@ require("packer").startup(
         use "wbthomason/packer.nvim"
         -- Gruvbox
         use "gruvbox-community/gruvbox"
-        -- Git gutter
+        -- Git Gutter
         use "airblade/vim-gitgutter"
-        -- Nvim comment
+        -- Nvim Comment
         use "terrortylor/nvim-comment"
         -- Lualine
         use "hoob3rt/lualine.nvim"
-        -- Dev icons
+        -- DevIcons
         use "kyazdani42/nvim-web-devicons"
         -- Telescope
         use "nvim-telescope/telescope.nvim"
@@ -30,7 +30,11 @@ require("packer").startup(
         -- Indent lines
         use "Yggdroot/indentLine"
         use "lukas-reineke/indent-blankline.nvim"
-        -- Nvim tree
+        -- NvimTree
         use "kyazdani42/nvim-tree.lua"
+        -- Vim Maximizer
+        use "szw/vim-maximizer"
+        -- COC
+        use "neoclide/coc.nvim"
     end
 )

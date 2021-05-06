@@ -7,6 +7,8 @@ vim.g.errorbells = false
 vim.g.splitbelow = true
 vim.g.splitright = true
 vim.g.updatetime = 100
+vim.g.smarttab = true
+vim.g.smartindent = true
 
 -- Window
 vim.wo.relativenumber = true
@@ -15,6 +17,7 @@ vim.wo.number = true
 vim.wo.wrap = false
 vim.wo.scrolloff = 4
 vim.wo.colorcolumn = "120"
+vim.o.completeopt = "menuone,noselect"
 
 -- Buffer
 vim.o.tabstop = 4
