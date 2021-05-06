@@ -36,5 +36,7 @@ require("packer").startup(
         use "szw/vim-maximizer"
         -- COC
         use "neoclide/coc.nvim"
+        -- Treesitter
+        use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
     end
 )
