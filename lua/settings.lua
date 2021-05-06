@@ -1,5 +1,4 @@
 -- Global
-vim.g.termguicolors = true
 vim.g.showmatch = true
 vim.g.hlsearch = false
 vim.g.showmode = false
@@ -29,6 +28,6 @@ vim.g.mapleader = " "
 vim.b.mapleader = " "
 
 -- Don't know how to
-vim.cmd("highlight ColorColumn ctermbg=0 guibg=none")
 vim.cmd("colorscheme gruvbox")
 vim.cmd("set clipboard=unnamedplus")
+vim.cmd("set termguicolors")

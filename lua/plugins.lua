@@ -15,29 +15,22 @@ require("packer").startup(
         use "wbthomason/packer.nvim"
         -- Gruvbox
         use "gruvbox-community/gruvbox"
-        -- NerdTree
-        use "preservim/nerdtree"
-        use "ryanoasis/vim-devicons"
-        use "tiagofumo/vim-nerdtree-syntax-highlight"
-        -- Git integration
-        use "Xuyuanp/nerdtree-git-plugin"
+        -- Git gutter
         use "airblade/vim-gitgutter"
+        -- Nvim comment
         use "terrortylor/nvim-comment"
         -- Lualine
-        use {
-            "hoob3rt/lualine.nvim",
-            requires = { "kyazdani42/nvim-web-devicons", opt = true }
-        }
+        use "hoob3rt/lualine.nvim"
+        -- Dev icons
+        use "kyazdani42/nvim-web-devicons"
         -- Telescope
-        use {
-          "nvim-telescope/telescope.nvim",
-          requires = {
-            { "nvim-lua/popup.nvim" },
-            { "nvim-lua/plenary.nvim" }
-          }
-        }
+        use "nvim-telescope/telescope.nvim"
+        use "nvim-lua/popup.nvim"
+        use "nvim-lua/plenary.nvim"
         -- Indent lines
         use "Yggdroot/indentLine"
         use "lukas-reineke/indent-blankline.nvim"
+        -- Nvim tree
+        use "kyazdani42/nvim-tree.lua"
     end
 )
