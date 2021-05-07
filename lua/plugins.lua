@@ -27,6 +27,7 @@ require("packer").startup(
         use "nvim-telescope/telescope.nvim"
         use "nvim-lua/popup.nvim"
         use "nvim-lua/plenary.nvim"
+        use "nvim-telescope/telescope-fzy-native.nvim"
         -- Indent lines
         use "Yggdroot/indentLine"
         use "lukas-reineke/indent-blankline.nvim"
