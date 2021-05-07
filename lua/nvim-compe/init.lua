@@ -1,3 +1,4 @@
+-- Options
 require('compe').setup {
   enabled = true;
   autocomplete = true;
@@ -62,3 +63,11 @@ _G.s_tab_complete = function()
     return t "<S-Tab>"
   end
 end
+
+-- Keybindings
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.cmd("inoremap <silent><expr> <C-Space> compe#complete()")
+vim.cmd("inoremap <silent><expr> <CR>      compe#confirm('<CR>')")
