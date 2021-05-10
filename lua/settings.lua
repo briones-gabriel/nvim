@@ -1,6 +1,5 @@
 -- Global
 vim.g.showmatch = true
-vim.g.hlsearch = false
 vim.g.showmode = false
 vim.g.hidden = true
 vim.g.errorbells = false
@@ -19,6 +18,7 @@ vim.wo.wrap = false
 vim.wo.scrolloff = 4
 vim.wo.colorcolumn = "120"
 vim.o.completeopt = "menuone,noselect"
+vim.o.hlsearch = false
 
 -- Buffer
 vim.o.tabstop = 4
