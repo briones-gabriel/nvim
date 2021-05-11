@@ -42,5 +42,6 @@ require("packer").startup(
         use "kabouzeid/nvim-lspinstall"
         -- Treesitter
         use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+        use "nvim-treesitter/playground"
     end
 )
