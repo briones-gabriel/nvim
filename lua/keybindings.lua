@@ -14,3 +14,9 @@ vim.api.nvim_set_keymap("n", "<C-h>", "<C-W><C-H>", Keymap_options)
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-W><C-J>", Keymap_options)
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-W><C-K>", Keymap_options)
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-W><C-L>", Keymap_options)
+
+-- Folding
+vim.api.nvim_set_keymap("n", "fo", "zo", Keymap_options)
+vim.api.nvim_set_keymap("n", "fc", "zc", Keymap_options)
+vim.api.nvim_set_keymap("n", "fr", "zR", Keymap_options)
+vim.api.nvim_set_keymap("n", "fa", "zM", Keymap_options)

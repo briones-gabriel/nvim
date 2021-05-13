@@ -12,6 +12,10 @@ vim.g.gruvbox_contrast_dark = "hard"
 
 -- Window
 vim.wo.relativenumber = true
+vim.wo.foldmethod = "indent"
+vim.wo.foldnestmax = 10
+vim.wo.foldenable = false
+vim.wo.foldlevel = 2
 vim.wo.cursorline = true
 vim.wo.number = true
 vim.wo.wrap = false
@@ -36,3 +40,4 @@ vim.cmd("colorscheme gruvbox")
 vim.cmd("set clipboard=unnamedplus")
 vim.cmd('set shortmess+=c')
 vim.cmd('set termguicolors')
+vim.cmd('syntax on')

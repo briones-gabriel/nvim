@@ -21,7 +21,7 @@ require("packer").startup(
         use "terrortylor/nvim-comment"
         -- Lualine
         use "hoob3rt/lualine.nvim"
-        -- DevIcons
+        -- Icons
         use "kyazdani42/nvim-web-devicons"
         -- Telescope
         use "nvim-telescope/telescope.nvim"
@@ -38,10 +38,10 @@ require("packer").startup(
         -- LSP
         use "neovim/nvim-lspconfig"
         use "hrsh7th/nvim-compe"
-        use "hrsh7th/vim-vsnip"
         use "kabouzeid/nvim-lspinstall"
+        use { "kkoomen/vim-doge", run = ":call doge#install()" }
         -- Treesitter
         use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-        use "nvim-treesitter/playground"
+        --use "nvim-treesitter/playground"
     end
 )

@@ -5,8 +5,8 @@ require('telescope').setup {
         color_devicons = true,
         set_env = { ['COLORTERM'] = 'truecolor' }, -- default = nil,
         file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
-        grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
-        qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
+        --grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
+        --qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
     },
     extensions = {
         fzy_native = {
@@ -20,4 +20,3 @@ require('telescope').load_extension('fzy_native')
 
 -- Keybindings
 vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files()<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<C-b>", "<cmd>lua require('telescope.builtin').buffers()<CR>", Keymap_options)

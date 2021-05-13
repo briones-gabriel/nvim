@@ -1,6 +1,6 @@
 -- Options
 vim.g.nvim_tree_gitignore = 1
-vim.g.nvim_tree_auto_open = 1
+--vim.g.nvim_tree_auto_open = 1
 vim.g.nvim_tree_quit_on_open = 1
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_hide_dotfiles = 1
@@ -13,14 +13,13 @@ vim.cmd("let g:nvim_tree_ignore = [ '.git', 'node_modules', 'target' ]")
 
 -- Keybindings
 vim.api.nvim_set_keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>r", ":NvimTreeRefresh<CR>", Keymap_options)
 
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 
 vim.g.nvim_tree_bindings = {
     ["<CR>"]    = tree_cb("edit"),
     ["o"]       = tree_cb("edit"),
-    ["<C-]>"]   = tree_cb("cd"),
+    ["<Leader>cd"]   = tree_cb("cd"),
     ["v"]       = tree_cb("vsplit"),
     ["h"]       = tree_cb("split"),
     ["t"]       = tree_cb("tabnew"),
