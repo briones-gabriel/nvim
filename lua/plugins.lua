@@ -42,6 +42,7 @@ require("packer").startup(
         use { "kkoomen/vim-doge", run = ":call doge#install()" }
         -- Treesitter
         use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-        --use "nvim-treesitter/playground"
+        -- TODO Comments
+        use "folke/todo-comments.nvim"
     end
 )
