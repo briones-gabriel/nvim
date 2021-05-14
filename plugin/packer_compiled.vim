@@ -119,10 +119,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
-  playground = {
-    loaded = true,
-    path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/playground"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/plenary.nvim"
@@ -139,6 +135,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["vim-doge"] = {
+    loaded = true,
+    path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/vim-doge"
+  },
   ["vim-gitgutter"] = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/vim-gitgutter"
@@ -146,10 +146,6 @@ _G.packer_plugins = {
   ["vim-maximizer"] = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/vim-maximizer"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   }
 }
 
