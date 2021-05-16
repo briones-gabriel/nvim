@@ -5,7 +5,7 @@ require("keybindings")
 
 -- Plugins config
 require("indent-blankline")
-require("git-gutter")
+require("nv-gitsigns")
 require("nv-lualine")
 require("nv-tree")
 require("nv-treesitter")
@@ -16,3 +16,4 @@ require("nv-comment")
 require("vim-maximizer")
 require("nv-telescope")
 require("nv-todo-comments")
+require('lush')(require('colorscheme'))
