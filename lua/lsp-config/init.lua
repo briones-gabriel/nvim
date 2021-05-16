@@ -9,10 +9,6 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
     }
 }
 
-require'lspconfig'.rust_analyzer.setup {
-    capabilities = capabilities,
-}
-
 require('vim.lsp.protocol').CompletionItemKind = {
       '  Text';          -- = 1
       '  Function';      -- = 2;
