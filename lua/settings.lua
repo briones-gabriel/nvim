@@ -8,8 +8,6 @@ vim.g.splitright = true
 vim.g.updatetime = 100
 vim.g.smarttab = true
 vim.g.smartindent = true
-vim.g.gruvbox_contrast_dark = "hard"
-vim.g.gruvbox_italic = 1
 
 -- Window
 vim.wo.relativenumber = true

@@ -13,12 +13,10 @@ end
 require("packer").startup(
     function()
         use "wbthomason/packer.nvim"
-        -- Colorschemes
-        --use "gruvbox-community/gruvbox"
+        -- Colorscheme
         use "lucastrvsn/melange"
         use "rktjmp/lush.nvim"
         -- Git Gutter
-        --use "airblade/vim-gitgutter"
         use "lewis6991/gitsigns.nvim"
         -- Nvim Comment
         use "terrortylor/nvim-comment"
