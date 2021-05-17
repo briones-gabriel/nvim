@@ -1,0 +1,5 @@
+vim.api.nvim_set_keymap("n", "<Leader>bc", ":lua require('toolwindow').close()<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>bq", ":lua require('toolwindow').open_window('quickfix', nil)<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>bt", ":lua require('toolwindow').open_window('term', nil)<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>bd", ":lua require('toolwindow').open_window('trouble', nil)<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>bn", ":lua require('toolwindow').open_window('todo', nil)<CR>", Keymap_options)
