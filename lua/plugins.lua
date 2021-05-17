@@ -49,5 +49,7 @@ require("packer").startup(
         use "folke/trouble.nvim"
         use "akinsho/nvim-toggleterm.lua"
         use "ethanjwright/toolwindow.nvim"
+        -- Zen Mode
+        use "folke/zen-mode.nvim"
     end
 )
