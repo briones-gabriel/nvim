@@ -15,6 +15,7 @@ require("packer").startup(
         use "wbthomason/packer.nvim"
         -- Colorscheme
         use "lucastrvsn/melange"
+        use "briones-gabriel/darcula-solid.nvim"
         use "rktjmp/lush.nvim"
         -- Git Gutter
         use "lewis6991/gitsigns.nvim"

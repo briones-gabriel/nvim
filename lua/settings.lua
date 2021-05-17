@@ -37,6 +37,7 @@ vim.b.mapleader = " "
 -- Don't know how to
 vim.cmd("set termguicolors")
 vim.cmd("syntax on")
-vim.cmd("colorscheme melange")
+vim.cmd("colorscheme darcula-solid")
 vim.cmd("set clipboard=unnamedplus")
 vim.cmd("set shortmess+=c")
+vim.cmd("highlight NvimTreeRootFolder guifg=#828D95")
