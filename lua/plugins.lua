@@ -14,7 +14,7 @@ require("packer").startup(
     function()
         use "wbthomason/packer.nvim"
         -- Colorscheme
-        use "lucastrvsn/melange"
+        use "briones-gabriel/darcula-solid.nvim"
         use "rktjmp/lush.nvim"
         -- Git Gutter
         use "lewis6991/gitsigns.nvim"
@@ -45,5 +45,9 @@ require("packer").startup(
         use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
         -- TODO Comments
         use "folke/todo-comments.nvim"
+        -- Toolwindow
+        use "folke/trouble.nvim"
+        use "akinsho/nvim-toggleterm.lua"
+        use "ethanjwright/toolwindow.nvim"
     end
 )

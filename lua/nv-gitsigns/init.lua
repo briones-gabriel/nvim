@@ -25,6 +25,7 @@ require('gitsigns').setup {
 
     -- Text objects
     ['o ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
+    ['n <Leader>sh'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
     ['x ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>'
   },
   watch_index = {
