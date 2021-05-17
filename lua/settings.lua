@@ -8,7 +8,6 @@ vim.g.splitright = true
 vim.g.updatetime = 100
 vim.g.smarttab = true
 vim.g.smartindent = true
-vim.g.gruvbox_contrast_dark = "hard"
 
 -- Window
 vim.wo.relativenumber = true
@@ -36,8 +35,8 @@ vim.g.mapleader = " "
 vim.b.mapleader = " "
 
 -- Don't know how to
-vim.cmd("colorscheme gruvbox")
+vim.cmd("set termguicolors")
+vim.cmd("syntax on")
+vim.cmd("colorscheme melange")
 vim.cmd("set clipboard=unnamedplus")
-vim.cmd('set shortmess+=c')
-vim.cmd('set termguicolors')
-vim.cmd('syntax on')
+vim.cmd("set shortmess+=c")
