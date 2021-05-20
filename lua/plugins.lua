@@ -46,10 +46,8 @@ require("packer").startup(
         use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
         -- TODO Comments
         use "folke/todo-comments.nvim"
-        -- Toolwindow
+        -- Trouble
         use "folke/trouble.nvim"
-        use "akinsho/nvim-toggleterm.lua"
-        use "ethanjwright/toolwindow.nvim"
         -- Zen Mode
         use "folke/zen-mode.nvim"
     end

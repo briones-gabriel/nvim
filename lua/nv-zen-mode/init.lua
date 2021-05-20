@@ -1,6 +1,6 @@
 require("zen-mode").setup {
   window = {
-    backdrop = 1, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
+    backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
     -- height and width can be:
     -- * an absolute number of cells when > 1
     -- * a percentage of the width / height of the editor when <= 1
@@ -20,7 +20,7 @@ require("zen-mode").setup {
   },
   plugins = {
     --gitsigns = true, -- disables git signs
-    --tmux = true, -- disables the tmux statusline
+    tmux = true, -- disables the tmux statusline
     -- this will change the font size on kitty when in Zen mode
     -- to make this work, you need to set the following kitty options:
     -- - allow_remote_control socket-only
@@ -37,3 +37,6 @@ require("zen-mode").setup {
   --on_close = function()
   --end,
 }
+
+-- Keybindings
+vim.api.nvim_set_keymap("n", "<Leader>z", ":ZenMode<CR>", Keymap_options)
