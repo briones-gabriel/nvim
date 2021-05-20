@@ -1,4 +1,23 @@
 -- Configuration
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true;
+
+local function setup_servers()
+  require'lspinstall'.setup()
+  local servers = require'lspinstall'.installed_servers()
+  for _, server in pairs(servers) do
+    require'lspconfig'[server].setup{ capabilities = capabilities }
+  end
+end
+
+setup_servers()
+
+-- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
+require'lspinstall'.post_install_hook = function ()
+  setup_servers() -- reload installed servers
+  vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
+end
+
 require('vim.lsp.protocol').CompletionItemKind = {
       '  Text';          -- = 1
       '  Function';      -- = 2;
@@ -35,3 +54,5 @@ vim.api.nvim_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", 
 vim.api.nvim_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", Keymap_options)
 vim.api.nvim_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", Keymap_options)
 vim.api.nvim_set_keymap("n", "<Leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", Keymap_options)
