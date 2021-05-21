@@ -51,5 +51,7 @@ require("packer").startup(
         use "folke/trouble.nvim"
         -- Zen Mode
         use "folke/zen-mode.nvim"
+        -- Buffer line
+        use "akinsho/nvim-bufferline.lua"
     end
 )
