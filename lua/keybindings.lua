@@ -8,6 +8,7 @@ vim.api.nvim_set_keymap("n", "<Leader>q", ":q<CR>", Keymap_options)
 vim.api.nvim_set_keymap("n", "<Leader>+", ":vertical resize +15<CR>", Keymap_options)
 vim.api.nvim_set_keymap("n", "<Leader>-", ":vertical resize -15<CR>", Keymap_options)
 vim.api.nvim_set_keymap("n", "<Leader>=", "<C-w>=", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>m", ":MaximizerToggle<CR>", Keymap_options)
 
 -- Buffer navigation
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-W><C-H>", Keymap_options)
