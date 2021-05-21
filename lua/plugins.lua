@@ -38,6 +38,7 @@ require("packer").startup(
         use "szw/vim-maximizer"
         -- LSP
         use "neovim/nvim-lspconfig"
+        use "onsails/lspkind-nvim"
         use "hrsh7th/nvim-compe"
         use "hrsh7th/vim-vsnip"
         use "kabouzeid/nvim-lspinstall"
