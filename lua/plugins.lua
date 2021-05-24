@@ -53,5 +53,7 @@ require("packer").startup(
         use "folke/zen-mode.nvim"
         -- Buffer line
         use "akinsho/nvim-bufferline.lua"
+        -- Autopairs
+        use "steelsojka/pears.nvim"
     end
 )
