@@ -24,7 +24,7 @@ require('bufferline').setup {
     -- [focused and unfocused]. eg: { '|', '|' }
     --separator_style = "slant" | "thick" | "thin" | { 'any', 'any' },
     enforce_regular_tabs = true,
-    always_show_bufferline = true
+    always_show_bufferline = false
     --sort_by = 'extension' | 'relative_directory' | 'directory' | function(buffer_a, buffer_b)
       -- add custom logic
       --return buffer_a.modified > buffer_b.modified
@@ -33,5 +33,6 @@ require('bufferline').setup {
 }
 
 -- Keybindings
-vim.api.nvim_set_keymap("n", "b]", ":BufferLineCycleNext<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "b[", ":BufferLineCycleNext<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>b]", ":BufferLineCycleNext<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>b[", ":BufferLineCycleNext<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>bd", ":bd<CR>", Keymap_options)
