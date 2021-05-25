@@ -20,7 +20,7 @@ require('compe').setup {
     treesitter = true;
     nvim_lua = true;
     calc = true;
-    --vsnip = true;
+    vsnip = true;
     spell = true;
     tags = true;
     --snippets_nvim = true;
