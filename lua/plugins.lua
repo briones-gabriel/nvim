@@ -16,6 +16,7 @@ require("packer").startup(
         -- Colorscheme
         use "briones-gabriel/darcula-solid.nvim"
         use "rktjmp/lush.nvim"
+        use "RRethy/nvim-base16"
         -- Git Gutter
         use "lewis6991/gitsigns.nvim"
         -- Nvim Comment
