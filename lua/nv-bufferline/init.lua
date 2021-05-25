@@ -33,6 +33,6 @@ require('bufferline').setup {
 }
 
 -- Keybindings
-vim.api.nvim_set_keymap("n", "<Leader>b]", ":BufferLineCycleNext<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>b[", ":BufferLineCycleNext<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>b]", ":w<CR>:BufferLineCycleNext<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>b[", ":w<CR>:BufferLineCyclePrev<CR>", Keymap_options)
 vim.api.nvim_set_keymap("n", "<Leader>bd", ":bd<CR>", Keymap_options)
