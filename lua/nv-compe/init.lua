@@ -3,7 +3,7 @@ require('compe').setup {
   enabled = true;
   autocomplete = true;
   debug = false;
-  min_length = 1;
+  min_length = 2;
   preselect = 'enable';
   throttle_time = 80;
   source_timeout = 200;
@@ -11,15 +11,15 @@ require('compe').setup {
   max_abbr_width = 100;
   max_kind_width = 100;
   max_menu_width = 100;
-  documentation = false;
+  documentation = true;
 
   source = {
     nvim_lsp = true;
     path = true;
     buffer = true;
-    treesitter = true;
+    --treesitter = true;
     nvim_lua = true;
-    calc = true;
+    --calc = true;
     vsnip = true;
     spell = true;
     tags = true;
