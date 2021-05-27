@@ -4,7 +4,8 @@ require('bufferline').setup {
     numbers = "none",
     number_style = "", -- buffer_id at index 1, ordinal at index 2
     mappings = true,
-    indicator_icon = '▎',
+    indicator_icon = '▏',
+    --indicator_icon = '▎',
     buffer_close_icon = '',
     modified_icon = '●',
     close_icon = '',
