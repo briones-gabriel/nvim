@@ -1,11 +1,10 @@
 require('gitsigns').setup {
   signs = {
-    add          = { hl = 'DiffAdd'   , text = '▕', numhl = 'GitSignsAddNr' },
-    change       = { hl = 'DiffChange', text = '▕', numhl = 'GitSignsChangeNr' },
-    delete       = { hl = 'DiffDelete', text = '▕', numhl = 'GitSignsDeleteNr' },
-    topdelete    = { hl = 'DiffDelete', text = '▕', numhl = 'GitSignsDeleteNr' },
-    changedelete = { hl = 'DiffChange', text = '▕', numhl = 'GitSignsChangeNr' },
-    --changedelete = { hl = 'DiffChange', text = '│', numhl = 'GitSignsChangeNr' },
+    add          = { hl = 'GitAdd'   , text = '▕', numhl = 'GitSignsAddNr' },
+    change       = { hl = 'GitChange', text = '▕', numhl = 'GitSignsChangeNr' },
+    delete       = { hl = 'GitDelete', text = '▕', numhl = 'GitSignsDeleteNr' },
+    topdelete    = { hl = 'GitDelete', text = '▕', numhl = 'GitSignsDeleteNr' },
+    changedelete = { hl = 'GitChange', text = '▕', numhl = 'GitSignsChangeNr' },
   },
   numhl = false,
   linehl = false,
@@ -26,9 +25,9 @@ require('gitsigns').setup {
     ['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line(true)<CR>',
 
     -- Text objects
-    ['o ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
+    --['o ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
     ['n <Leader>sh'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
-    ['x ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>'
+    --['x ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>'
   },
   watch_index = {
     interval = 1000
@@ -40,3 +39,7 @@ require('gitsigns').setup {
   use_decoration_api = true,
   use_internal_diff = true,  -- If luajit is present
 }
+
+vim.cmd("hi GitAdd guifg=#8fa867")
+vim.cmd("hi GitChange guifg=#ffc66b")
+vim.cmd("hi GitDelete guifg=#e74946")
