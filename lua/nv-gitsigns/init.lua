@@ -1,10 +1,11 @@
 require('gitsigns').setup {
   signs = {
-    add          = { hl = 'DiffAdd'   , text = '│', numhl = 'GitSignsAddNr' },
-    change       = { hl = 'DiffChange', text = '│', numhl = 'GitSignsChangeNr' },
-    delete       = { hl = 'DiffDelete', text = '│', numhl = 'GitSignsDeleteNr' },
-    topdelete    = { hl = 'DiffDelete', text = '│', numhl = 'GitSignsDeleteNr' },
-    changedelete = { hl = 'DiffChange', text = '│', numhl = 'GitSignsChangeNr' },
+    add          = { hl = 'DiffAdd'   , text = '▕', numhl = 'GitSignsAddNr' },
+    change       = { hl = 'DiffChange', text = '▕', numhl = 'GitSignsChangeNr' },
+    delete       = { hl = 'DiffDelete', text = '▕', numhl = 'GitSignsDeleteNr' },
+    topdelete    = { hl = 'DiffDelete', text = '▕', numhl = 'GitSignsDeleteNr' },
+    changedelete = { hl = 'DiffChange', text = '▕', numhl = 'GitSignsChangeNr' },
+    --changedelete = { hl = 'DiffChange', text = '│', numhl = 'GitSignsChangeNr' },
   },
   numhl = false,
   linehl = false,
@@ -13,14 +14,15 @@ require('gitsigns').setup {
     noremap = true,
     buffer = true,
 
-    ['n <Leader>nh'] = { expr = true, "&diff ? ']c' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"},
-    ['n <Leader>ph'] = { expr = true, "&diff ? '[c' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"},
+    ['n <Leader>hn'] = { expr = true, "&diff ? ']c' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"},
+    ['n <Leader>hp'] = { expr = true, "&diff ? '[c' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"},
 
     ['n <leader>hs'] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
+    ['n <leader>hS'] = '<cmd>lua require"gitsigns".stage_buffer()<CR>',
     ['n <leader>hu'] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
     ['n <leader>hr'] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
     ['n <leader>hR'] = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
-    ['n <leader>hp'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
+    ['n <leader>hP'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
     ['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line(true)<CR>',
 
     -- Text objects
