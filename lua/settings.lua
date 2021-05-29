@@ -35,7 +35,6 @@ vim.g.mapleader = " "
 vim.b.mapleader = " "
 
 -- Don't know how to
-vim.cmd("set termguicolors")
-vim.cmd("colorscheme darcula-solid")
 vim.cmd("set clipboard=unnamedplus")
 vim.cmd("set shortmess+=c")
+vim.cmd("highlight EndOfBuffer guifg=bg")
