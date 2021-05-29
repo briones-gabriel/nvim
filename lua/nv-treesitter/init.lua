@@ -1,5 +1,16 @@
 require("nvim-treesitter.configs").setup {
-    highlight = { enable = true },
+    ensure_installed = {
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "java",
+        "vue",
+        "yaml",
+        "toml",
+        "bash"
+    },
+    highlight = { enable = true, disable = { "c", "rust" } },
     incremental_selection = {
         enable = true,
         keymaps = {

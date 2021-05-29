@@ -1,40 +1,42 @@
+local opt = vim.opt
+
 -- Global
-vim.g.showmatch = true
-vim.g.showmode = false
-vim.g.hidden = true
-vim.g.errorbells = false
-vim.g.splitbelow = true
-vim.g.splitright = true
-vim.g.updatetime = 100
-vim.g.smarttab = true
-vim.g.smartindent = true
+opt.showmatch = true
+opt.showmode = false
+opt.hidden = true
+opt.errorbells = false
+opt.splitbelow = true
+opt.splitright = true
+opt.updatetime = 100
+opt.smarttab = true
+opt.smartindent = true
+opt.shortmess:append { c = true }
+opt.fillchars = { eob = " "}
+opt.clipboard = "unnamedplus"
 
 -- Window
-vim.wo.relativenumber = true
-vim.wo.foldmethod = "indent"
-vim.wo.foldnestmax = 10
-vim.wo.foldenable = false
-vim.wo.foldlevel = 2
-vim.wo.cursorline = true
-vim.wo.number = true
-vim.wo.wrap = false
-vim.wo.scrolloff = 4
-vim.wo.colorcolumn = "120"
-vim.o.completeopt = "menuone,noselect"
-vim.o.hlsearch = false
+opt.relativenumber = true
+opt.foldmethod = "indent"
+opt.foldnestmax = 10
+opt.foldenable = false
+opt.foldlevel = 2
+opt.cursorline = true
+opt.number = true
+opt.wrap = false
+opt.scrolloff = 4
+opt.colorcolumn = "120"
+opt.completeopt = "menuone,noselect"
+opt.hlsearch = false
 
 -- Buffer
-vim.o.tabstop = 4
-vim.bo.tabstop = 4
-vim.o.shiftwidth = 4
-vim.bo.shiftwidth = 4
-vim.o.expandtab = true
+opt.tabstop = 4
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.shiftwidth = 4
+opt.expandtab = true
 
 -- Leader
 vim.g.mapleader = " "
 vim.b.mapleader = " "
 
--- Don't know how to
-vim.cmd("set clipboard=unnamedplus")
-vim.cmd("set shortmess+=c")
-vim.cmd("highlight EndOfBuffer guifg=bg")
+--vim.cmd("highlight EndOfBuffer guifg=bg")
