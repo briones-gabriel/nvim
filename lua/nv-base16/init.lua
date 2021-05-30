@@ -7,4 +7,5 @@ require('base16-colorscheme').setup({
 
 vim.cmd("hi TSTag guifg=#ffc66b")
 vim.cmd("hi TSTagDelimiter guifg=#cd7832")
+vim.cmd("hi TSComment guifg=None")
 vim.cmd("hi Error guibg=bg")
