@@ -1,20 +1,31 @@
 -- Options
 vim.g.nvim_tree_gitignore = 1
---vim.g.nvim_tree_auto_open = 1
 vim.g.nvim_tree_quit_on_open = 1
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_hide_dotfiles = 1
---vim.g.nvim_tree_git_hl = 1
---vim.g.nvim_tree_group_empty = 1
+vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_lsp_diagnostics = 1
 vim.g.nvim_tree_width_allow_resize = 1
-vim.cmd("let g:nvim_tree_special_files = [ 'README.md', 'application.properties' ]")
-vim.cmd("let g:nvim_tree_ignore = [ '.git', 'node_modules', 'target' ]")
+vim.g.nvim_tree_icons = { default = "" }
+vim.g.nvim_tree_special_files = {
+    "README.md",
+    "application.properties"
+}
+vim.g.nvim_tree_ignore = {
+    ".git",
+    "node_modules",
+    "target"
+}
+vim.g.nvim_tree_show_icons = {
+    git = 0,
+    folders = 1,
+    files = 1
+}
 
 -- Keybindings
 vim.api.nvim_set_keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", Keymap_options)
 
-local tree_cb = require('nvim-tree.config').nvim_tree_callback
+local tree_cb = require("nvim-tree.config").nvim_tree_callback
 
 vim.g.nvim_tree_bindings = {
     ["<CR>"]    = tree_cb("edit"),
