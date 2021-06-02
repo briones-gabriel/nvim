@@ -1,6 +1,6 @@
 local opt = vim.opt
 
--- Global
+-- General
 opt.showmatch = true
 opt.showmode = false
 opt.hidden = true
@@ -38,5 +38,3 @@ opt.expandtab = true
 -- Leader
 vim.g.mapleader = " "
 vim.b.mapleader = " "
-
---vim.cmd("highlight EndOfBuffer guifg=bg")
