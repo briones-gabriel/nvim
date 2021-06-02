@@ -57,5 +57,7 @@ require("packer").startup(
         use "akinsho/nvim-bufferline.lua"
         -- Autopairs
         use "steelsojka/pears.nvim"
+        -- Startify
+        use "mhinz/vim-startify"
     end
 )
