@@ -13,6 +13,7 @@ opt.smartindent = true
 opt.shortmess:append { c = true }
 opt.fillchars = { eob = " "}
 opt.clipboard = "unnamedplus"
+vim.g.indentLine_char = "▏"
 
 -- Window
 opt.relativenumber = true
