@@ -26,5 +26,9 @@ vim.api.nvim_set_keymap("n", "fm", "zM", Keymap_options)
 
 -- Git
 vim.api.nvim_set_keymap("n", "<Leader>gs", ":G<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>gh", ":diffget //3<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>gl", ":diffget //2<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>ga", ":Git add .<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>gc", ":G commit<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>gpl", ":G pull<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>gps", ":G push<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>gh", ":diffget //2<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>gl", ":diffget //3<CR>", Keymap_options)
