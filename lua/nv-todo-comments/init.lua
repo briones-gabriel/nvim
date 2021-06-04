@@ -19,14 +19,10 @@ require("todo-comments").setup {
         default = { "Identifier", "#7C3AED" },
     },
     signs = false,
-    -- highlighting of the line containing the todo comment
-    -- * before: highlights before the keyword (typically comment characters)
-    -- * keyword: highlights of the keyword
-    -- * after: highlights after the keyword (todo text)
     highlight = {
-        before = "fg", -- "fg" or "bg" or empty
-        keyword = "fg", -- "fg", "bg", "wide" or empty. (wide is the same as bg, but will also highlight surrounding characters)
-        after = "fg", -- "fg" or "bg" or empty
+        before = "fg",
+        keyword = "fg",
+        after = "fg",
         comments_only = true,
         pattern = [[.*<(KEYWORDS)\s*:]],
     },
@@ -39,9 +35,6 @@ require("todo-comments").setup {
             "--line-number",
             "--column",
         },
-        -- regex that will be used to match keywords.
-        -- don't replace the (KEYWORDS) placeholder
         pattern = [[\b(KEYWORDS):]], -- ripgrep regex
-        -- pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
     },
 }
