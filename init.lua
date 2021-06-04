@@ -4,7 +4,6 @@ require("settings")
 require("keybindings")
 
 -- Plugins config
-require("indent-blankline")
 require("nv-gitsigns")
 require("nv-lualine")
 require("nv-tree")

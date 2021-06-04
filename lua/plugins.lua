@@ -17,8 +17,9 @@ require("packer").startup(
         --use "briones-gabriel/darcula-solid.nvim"
         --use "rktjmp/lush.nvim"
         use "RRethy/nvim-base16"
-        -- Git Gutter
+        -- Git
         use "lewis6991/gitsigns.nvim"
+        use "tpope/vim-fugitive"
         -- Nvim Comment
         use "terrortylor/nvim-comment"
         -- Lualine

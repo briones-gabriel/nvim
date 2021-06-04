@@ -9,6 +9,8 @@ vim.api.nvim_set_keymap("n", "<Leader>+", ":vertical resize +15<CR>", Keymap_opt
 vim.api.nvim_set_keymap("n", "<Leader>-", ":vertical resize -15<CR>", Keymap_options)
 vim.api.nvim_set_keymap("n", "<Leader>=", "<C-w>=", Keymap_options)
 vim.api.nvim_set_keymap("n", "<Leader>m", ":MaximizerToggle<CR>", Keymap_options)
+vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", Keymap_options)
+vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", Keymap_options)
 
 -- Buffer navigation
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-W><C-H>", Keymap_options)
@@ -21,3 +23,8 @@ vim.api.nvim_set_keymap("n", "fo", "zo", Keymap_options)
 vim.api.nvim_set_keymap("n", "fc", "zc", Keymap_options)
 vim.api.nvim_set_keymap("n", "fr", "zR", Keymap_options)
 vim.api.nvim_set_keymap("n", "fm", "zM", Keymap_options)
+
+-- Git
+vim.api.nvim_set_keymap("n", "<Leader>gs", ":G<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>gh", ":diffget //3<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>gl", ":diffget //2<CR>", Keymap_options)
