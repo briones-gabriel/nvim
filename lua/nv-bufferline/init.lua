@@ -23,7 +23,7 @@ require('bufferline').setup {
 }
 
 -- Highlighting
-vim.cmd("hi BufferLineIndicatorSelected guifg=yellow")
+vim.cmd("hi BufferLineIndicatorSelected guifg=white")
 vim.cmd("hi BufferLineSeparator guifg=bg")
 
 -- Keybindings
