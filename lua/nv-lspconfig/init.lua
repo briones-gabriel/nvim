@@ -28,4 +28,4 @@ vim.api.nvim_set_keymap("n", "<M-CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>",
 vim.api.nvim_set_keymap("n", "<Leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", Keymap_options)
 vim.api.nvim_set_keymap("n", "<Leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", Keymap_options)
 vim.api.nvim_set_keymap("n", "<Leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>ll", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", Keymap_options)
