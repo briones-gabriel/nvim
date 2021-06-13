@@ -5,6 +5,8 @@ opt.nvim_tree_quit_on_open = 1
 opt.nvim_tree_indent_markers = 1
 opt.nvim_tree_hide_dotfiles = 1
 opt.nvim_tree_git_hl = 1
+opt.nvim_tree_highlight_opened_files = 1
+--opt.nvim_tree_add_trailing = 1
 opt.nvim_tree_lsp_diagnostics = 1
 opt.nvim_tree_width_allow_resize = 1
 opt.nvim_tree_icons = { default = "" }
