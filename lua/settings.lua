@@ -13,7 +13,6 @@ opt.smartindent = true
 opt.shortmess:append { c = true }
 opt.fillchars = { eob = " "}
 opt.clipboard = "unnamedplus"
-opt.guicursor = "n-v-c-sm:block,i-ci-ve:block,r-cr-o:hor20"
 vim.g.indentLine_char = "▏"
 
 -- Window
