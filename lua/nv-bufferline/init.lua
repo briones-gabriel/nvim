@@ -8,16 +8,18 @@ require('bufferline').setup {
         modified_icon = '●',
         left_trunc_marker = '',
         right_trunc_marker = '',
-        max_name_length = 18,
-        max_prefix_length = 15,
-        tab_size = 18,
+        max_name_length = 14,
+        max_prefix_length = 13,
+        tab_size = 20,
         diagnostics = false,
-        offsets = {{ filetype = "NvimTree", text = "Files", text_align = "center" }},
+        offsets = {{ filetype = "NvimTree", text = "", text_align = "center" }},
         show_buffer_icons = true,
         show_buffer_close_icons = false,
         show_close_icon = false,
         show_tab_indicators = true,
+        separator_style = "thin",
         enforce_regular_tabs = true,
+        view = "multiwindow",
         always_show_bufferline = false
     }
 }
