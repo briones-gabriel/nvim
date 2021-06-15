@@ -10,14 +10,14 @@ require('bufferline').setup {
         max_prefix_length = 13,
         tab_size = 20,
         diagnostics = false,
-        offsets = {{filetype = "NvimTree", text = "", padding = 1}},
+        offsets = {{ filetype = "NvimTree", text = "", padding = 1 }},
         show_buffer_icons = true,
         show_buffer_close_icons = false,
         show_close_icon = false,
         separator_style = "thin",
         show_tab_indicators = true,
-        view = "multiwindow",
         enforce_regular_tabs = true,
+        view = "multiwindow",
         always_show_bufferline = false
     }
 }
