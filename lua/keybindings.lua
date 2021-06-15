@@ -11,7 +11,7 @@ vim.api.nvim_set_keymap("n", "<Leader>=", "<C-w>=", Keymap_options)
 vim.api.nvim_set_keymap("n", "<Leader>m", ":MaximizerToggle<CR>", Keymap_options)
 vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", Keymap_options)
 vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>;", ":JABSOpen<CR>", Keymap_options)
+vim.api.nvim_set_keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", Keymap_options)
 
 -- Buffer navigation
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-W><C-H>", Keymap_options)

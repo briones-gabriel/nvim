@@ -5,21 +5,53 @@ require('base16-colorscheme').setup({
     base0C = '#ced1d4', base0D = '#ffc66b', base0E = '#cd7832', base0F = '#808080'
 })
 
+local cmd = vim.cmd
+
 -- Common tweaking
-vim.cmd("hi TSTag guifg=#ffc66b")
-vim.cmd("hi TSTagDelimiter guifg=#cd7832")
-vim.cmd("hi TSComment guifg=None")
-vim.cmd("hi Error guibg=bg")
+cmd("hi TSTag guifg=#ffc66b")
+cmd("hi TSTagDelimiter guifg=#cd7832")
+cmd("hi TSComment guifg=None")
+cmd("hi Error guibg=bg")
+
 -- NvimTree
-vim.cmd("hi NvimTreeFolderIcon guifg=#87939A")
-vim.cmd("hi Directory guifg=fg")
+cmd("hi NvimTreeFolderIcon guifg=#87939A")
+cmd("hi NvimTreeRootFolder guifg=bg")
+--cmd("hi NvimTreeVertSplit guifg=#373737")
+cmd("hi Directory guifg=fg")
+
 -- NvimTree GitAdd
-vim.cmd("hi NvimTreeGitMerge guifg=#8FA867")
-vim.cmd("hi NvimTreeGitStaged guifg=#8FA867")
+cmd("hi NvimTreeGitMerge guifg=#8FA867")
+cmd("hi NvimTreeGitStaged guifg=#8FA867")
+
 -- NvimTree GitChange
-vim.cmd("hi NvimTreeGitIgnored guifg=#FFC66B")
-vim.cmd("hi NvimTreeGitDirty guifg=#FFC66B")
-vim.cmd("hi NvimTreeGitRenamed guifg=#FFC66B")
-vim.cmd("hi NvimTreeGitNew guifg=#FFC66B")
+cmd("hi NvimTreeGitIgnored guifg=#FFC66B")
+cmd("hi NvimTreeGitDirty guifg=#FFC66B")
+cmd("hi NvimTreeGitRenamed guifg=#FFC66B")
+cmd("hi NvimTreeGitNew guifg=#FFC66B")
+
 -- NvimTree GitDelete
-vim.cmd("hi NvimTreeGitDeleted guifg=#E74946")
+cmd("hi NvimTreeGitDeleted guifg=#E74946")
+
+-- BufferLine
+cmd("hi BufferLineBackground guifg=#8a8a8a guibg=#1c1c1d")
+cmd("hi BufferLineBufferSelected gui=bold,italic guifg=#ced1d4 guibg=#262627")
+cmd("hi BufferLineBufferVisible guifg=#8a8a8a guibg=#222223")
+cmd("hi BufferLineFill guifg=#8a8a8a guibg=#141415")
+cmd("hi BufferLineIndicatorSelected guifg=#323234 guibg=#262627")
+cmd("hi BufferLinePick gui=bold,italic guifg=#ced1d4 guibg=#1c1c1d")
+cmd("hi BufferLinePickSelected gui=bold,italic guifg=#ced1d4 guibg=#262627")
+cmd("hi BufferLinePickVisible gui=bold,italic guifg=#ced1d4 guibg=#222223")
+cmd("hi BufferLineSeparator guifg=#141415 guibg=#1c1c1d")
+cmd("hi BufferLineSeparatorSelected guifg=#141415 guibg=#262627")
+cmd("hi BufferLineSeparatorVisible guifg=#141415 guibg=#222223")
+cmd("hi BufferLineTab  guifg=#8a8a8a guibg=#1c1c1d")
+cmd("hi BufferLineTabClose guifg=#8a8a8a guibg=#1c1c1d")
+cmd("hi BufferLineTabSelected guifg=#323234 guibg=#262627")
+cmd("hi BufferlineDevIconDefault guifg=#6d8086 guibg=#1c1c1d")
+cmd("hi BufferlineDevIconhtmlSelected guifg=#e34c26 guibg=#262627")
+cmd("hi BufferlineDevIconts guifg=#519aba guibg=#1c1c1d")
+cmd("hi BufferlineDevIcontsInactive guifg=#519aba guibg=#222223")
+cmd("hi BufferlineDevIcontsSelected guifg=#519aba guibg=#262627")
+
+-- Indentline
+cmd("hi IndentBlanklineChar guifg=#373737")

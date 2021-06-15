@@ -19,5 +19,5 @@ require("zen-mode").setup {
     },
 }
 
--- Keybindings
+---- Keybindings
 vim.api.nvim_set_keymap("n", "<Leader>z", ":ZenMode<CR>", Keymap_options)

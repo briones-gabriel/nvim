@@ -15,11 +15,8 @@ require('compe').setup {
 
     source = {
         nvim_lsp = true;
-        nvim_lua = true;
-        vsnip = true;
-        ultisnips = true;
-        --path = true;
-        buffer = true;
+        vsnip = { kind = "﬌" };
+        buffer = { kind = "﬘", true };
     };
 }
 

@@ -9,35 +9,46 @@ if fn.empty(fn.glob(install_path)) > 0 then
     execute "packadd packer.nvim"
 end
 
+local packer = require("packer")
+local use = packer.use
+
 -- Plugins list
 require("packer").startup(
 function()
     use "wbthomason/packer.nvim"
+
     -- Colorscheme
-    --use "briones-gabriel/darcula-solid.nvim"
-    --use "rktjmp/lush.nvim"
     use "RRethy/nvim-base16"
+
     -- Git
     use "lewis6991/gitsigns.nvim"
     use "tpope/vim-fugitive"
+
     -- Nvim Comment
     use "terrortylor/nvim-comment"
+
     -- Lualine
     use "hoob3rt/lualine.nvim"
+
     -- Icons
     use "kyazdani42/nvim-web-devicons"
+
     -- Telescope
     use "nvim-telescope/telescope.nvim"
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
     use "nvim-telescope/telescope-fzy-native.nvim"
+
     -- Indent lines
-    use "Yggdroot/indentLine"
-    use "lukas-reineke/indent-blankline.nvim"
+    --use "Yggdroot/indentLine"
+    use { "lukas-reineke/indent-blankline.nvim", branch = "lua" }
+
     -- NvimTree
     use "kyazdani42/nvim-tree.lua"
+
     -- Vim Maximizer
     use "szw/vim-maximizer"
+
     -- LSP
     use "neovim/nvim-lspconfig"
     use "onsails/lspkind-nvim"
@@ -45,19 +56,25 @@ function()
     use "hrsh7th/vim-vsnip"
     use "kabouzeid/nvim-lspinstall"
     use { "kkoomen/vim-doge", run = ":call doge#install()" }
+
     -- Treesitter
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-    use "nvim-treesitter/playground"
+
     -- TODO Comments
     use "folke/todo-comments.nvim"
+
     -- Trouble
     use "folke/trouble.nvim"
+
     -- Zen Mode
     use "folke/zen-mode.nvim"
+
     -- Buffer line
     use "akinsho/nvim-bufferline.lua"
+
     -- Autopairs
     use "steelsojka/pears.nvim"
+
     -- Startify
     use "mhinz/vim-startify"
 end
