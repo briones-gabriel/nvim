@@ -63,9 +63,6 @@ function()
     -- TODO Comments
     use "folke/todo-comments.nvim"
 
-    -- Trouble
-    use "folke/trouble.nvim"
-
     -- Zen Mode
     use "folke/zen-mode.nvim"
 

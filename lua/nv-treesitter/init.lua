@@ -8,6 +8,7 @@ require("nvim-treesitter.configs").setup {
         "vue",
         "yaml",
         "toml",
+        "lua",
         "bash"
     },
     highlight = { enable = true, disable = { "c", "rust" }, use_languagetree = true },
