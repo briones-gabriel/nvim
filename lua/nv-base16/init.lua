@@ -11,23 +11,24 @@ local cmd = vim.cmd
 cmd("hi TSTag guifg=#ffc66b")
 cmd("hi TSTagDelimiter guifg=#cd7832")
 cmd("hi TSComment guifg=None")
+cmd("hi Comment ctermfg=14 gui=italic guifg=#8a8a8a")
 cmd("hi Error guibg=bg")
 
 -- NvimTree
-cmd("hi NvimTreeFolderIcon guifg=#87939A")
-cmd("hi NvimTreeRootFolder guifg=bg")
---cmd("hi NvimTreeVertSplit guifg=#373737")
+cmd("hi NvimTreeRootFolder guifg=#323234")
+cmd("hi NvimTreeNormal guibg=#323234")
+cmd("hi NvimTreeVertSplit guifg=bg")
 cmd("hi Directory guifg=fg")
 
 -- NvimTree GitAdd
-cmd("hi NvimTreeGitMerge guifg=#8FA867")
-cmd("hi NvimTreeGitStaged guifg=#8FA867")
+cmd("hi NvimTreeGitMerge guifg=#FFC66B")
+cmd("hi NvimTreeGitStaged guifg=#FFC66B")
 
 -- NvimTree GitChange
-cmd("hi NvimTreeGitIgnored guifg=#FFC66B")
-cmd("hi NvimTreeGitDirty guifg=#FFC66B")
-cmd("hi NvimTreeGitRenamed guifg=#FFC66B")
-cmd("hi NvimTreeGitNew guifg=#FFC66B")
+cmd("hi NvimTreeGitIgnored guifg=#83b1f1")
+cmd("hi NvimTreeGitDirty guifg=#83b1f1")
+cmd("hi NvimTreeGitRenamed guifg=#83b1f1")
+cmd("hi NvimTreeGitNew guifg=#83b1f1")
 
 -- NvimTree GitDelete
 cmd("hi NvimTreeGitDeleted guifg=#E74946")

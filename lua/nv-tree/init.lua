@@ -4,20 +4,36 @@ local opt = vim.g
 opt.nvim_tree_gitignore = 1
 opt.nvim_tree_quit_on_open = 1
 opt.nvim_tree_auto_open = 0
-opt.nvim_tree_auto_close = 0
+opt.nvim_tree_auto_close = 1
 opt.nvim_tree_indent_markers = 1
 opt.nvim_tree_hide_dotfiles = 1
-opt.nvim_tree_git_hl = 1
-opt.nvim_tree_highlight_opened_files = 1
-opt.nvim_tree_lsp_diagnostics = 1
+opt.nvim_tree_git_hl = 0
+opt.nvim_tree_highlight_opened_files = 0
+opt.nvim_tree_lsp_diagnostics = 0
 opt.nvim_tree_width = 30
 opt.nvim_tree_follow = 1
 opt.nvim_tree_allow_resize = 1
-opt.nvim_tree_follow = 1
-opt.nvim_tree_icons = { default = "" }
 opt.nvim_tree_special_files = { "README.md", "application.properties" }
 opt.nvim_tree_ignore = { ".git", "node_modules", "target" }
-opt.nvim_tree_show_icons = { git = 0, folders = 1, files = 1 }
+opt.nvim_tree_show_icons = { git = 1, folders = 1, files = 1 }
+opt.nvim_tree_icons = {
+    default = "",
+    git = {
+        unstaged = "",
+        staged = "",
+        unmerged = "",
+        renamed = "",
+        untracked = "",
+        deleted = "",
+        ignored = ""
+    },
+    lsp = {
+        hint = "",
+        info = "",
+        warning = "",
+        error = ""
+    }
+}
 
 -- Keybindings
 local tree_cb = require("nvim-tree.config").nvim_tree_callback
