@@ -10,7 +10,7 @@ g.errorbells = false
 g.updatetime = 100
 g.shortmess:append { c = true }
 g.clipboard = "unnamedplus"
-g.fillchars = { eob = " "}
+g.fillchars = { eob = " " }
 vim.g.indentLine_char = "▏"
 
 -- Window
@@ -39,3 +39,4 @@ vim.g.mapleader = " "
 vim.b.mapleader = " "
 
 cmd("colorscheme base16-onedark")
+--cmd("colorscheme nvcode")

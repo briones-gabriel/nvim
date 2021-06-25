@@ -72,5 +72,6 @@ function()
 
     -- Startify
     use "mhinz/vim-startify"
+    use "christianchiarulli/nvcode-color-schemes.vim"
 end
 )
