@@ -11,5 +11,8 @@ require("nvim-treesitter.configs").setup {
         "lua",
         "bash"
     },
-    highlight = { enable = true, disable = { "c", "rust" }, use_languagetree = true },
+    highlight = {
+        enable = true,
+        disable = { "c", "rust" }
+    },
 }
