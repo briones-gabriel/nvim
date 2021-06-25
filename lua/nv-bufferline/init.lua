@@ -18,13 +18,3 @@ require('bufferline').setup {
         always_show_bufferline = false
     }
 }
-
--- Keybindings
-local map = vim.api.nvim_set_keymap
-local opt = { noremap = true, silent = true }
-
-map("n", "<TAB>", ":BufferLineCycleNext<CR>", opt)
-map("n", "<S-TAB>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<S-x>", ":bd<CR>", opt)
-map("n", "<C-]>", ":BufferLineMoveNext<CR>", opt)
-map("n", "<C-[>", ":BufferLineMovePrev<CR>", opt)

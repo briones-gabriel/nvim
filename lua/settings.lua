@@ -1,41 +1,41 @@
-local opt = vim.opt
-
 -- General
-opt.showmatch = true
-opt.showmode = false
-opt.hidden = true
-opt.errorbells = false
-opt.splitbelow = true
-opt.splitright = true
-opt.updatetime = 100
-opt.smarttab = true
-opt.smartindent = true
-opt.shortmess:append { c = true }
-opt.fillchars = { eob = " "}
-opt.clipboard = "unnamedplus"
+g.showmatch = true
+g.hidden = true
+g.splitbelow = true
+g.splitright = true
+g.smartindent = true
+g.smarttab = true
+g.showmode = false
+g.errorbells = false
+g.updatetime = 100
+g.shortmess:append { c = true }
+g.clipboard = "unnamedplus"
+g.fillchars = { eob = " "}
 vim.g.indentLine_char = "▏"
 
 -- Window
-opt.relativenumber = true
-opt.foldmethod = "indent"
-opt.foldnestmax = 10
-opt.foldenable = false
-opt.foldlevel = 2
-opt.cursorline = true
-opt.number = true
-opt.wrap = false
-opt.scrolloff = 4
-opt.colorcolumn = "120"
-opt.completeopt = "menuone,noselect"
-opt.hlsearch = false
+g.relativenumber = true
+g.cursorline = true
+g.number = true
+g.wrap = false
+g.foldenable = false
+g.hlsearch = false
+g.scrolloff = 4
+g.foldlevel = 2
+g.foldnestmax = 10
+g.foldmethod = "indent"
+g.colorcolumn = "120"
+g.completeopt = "menuone,noselect"
 
 -- Buffer
-opt.tabstop = 4
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.shiftwidth = 4
-opt.expandtab = true
+g.expandtab = true
+g.tabstop = 4
+g.tabstop = 4
+g.shiftwidth = 4
+g.shiftwidth = 4
 
 -- Leader
 vim.g.mapleader = " "
 vim.b.mapleader = " "
+
+cmd("colorscheme base16-onedark")

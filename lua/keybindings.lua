@@ -1,35 +1,60 @@
-Keymap_options = { noremap = true, silent = true }
-
 -- Common keybindings
-vim.api.nvim_set_keymap("n", "<Leader>w", ":w<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>q", ":q<CR>", Keymap_options)
+nmap("<Leader>w", ":w<CR>")
+nmap("<Leader>q", ":q<CR>")
 
 -- Buffer control
-vim.api.nvim_set_keymap("n", "<Leader>+", ":vertical resize +15<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>-", ":vertical resize -15<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>=", "<C-w>=", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>m", ":MaximizerToggle<CR>", Keymap_options)
-vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", Keymap_options)
-vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>t", ":NvimTreeToggle<CR>", Keymap_options)
+nmap("<Leader>+", ":vertical resize +15<CR>")
+nmap("<Leader>-", ":vertical resize -15<CR>")
+nmap("<Leader>=", "<C-w>=")
+nmap("<Leader>m", ":MaximizerToggle<CR>")
+vmap("J", ":m '>+1<CR>gv=gv")
+vmap("K", ":m '<-2<CR>gv=gv")
+nmap("<Leader>t", ":NvimTreeToggle<CR>")
 
 -- Buffer navigation
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-W><C-H>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-W><C-J>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-W><C-K>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-W><C-L>", Keymap_options)
+nmap("<S-h>", "<C-W><C-H>")
+nmap("<S-j>", "<C-W><C-J>")
+nmap("<S-k>", "<C-W><C-K>")
+nmap("<S-l>", "<C-W><C-L>")
+
+-- BufferLine
+nmap("<C-l>", ":BufferLineCycleNext<CR>")
+nmap("<C-h>", ":BufferLineCyclePrev<CR>")
+nmap("<C-w>", ":bd<CR>")
+nmap("<C-]>", ":BufferLineMoveNext<CR>")
+nmap("<C-[>", ":BufferLineMovePrev<CR>")
+
+-- Zenmode
+nmap("<Leader>z", ":ZenMode<CR>")
+
+-- Commenting
+nmap("<Leader>/", ":CommentToggle<CR>")
+vmap("<Leader>/", ":CommentToggle<CR>")
 
 -- Folding
-vim.api.nvim_set_keymap("n", "fo", "zo", Keymap_options)
-vim.api.nvim_set_keymap("n", "fc", "zc", Keymap_options)
-vim.api.nvim_set_keymap("n", "fr", "zR", Keymap_options)
-vim.api.nvim_set_keymap("n", "fm", "zM", Keymap_options)
+nmap("fo", "zo")
+nmap("fc", "zc")
+nmap("fr", "zR")
+nmap("fm", "zM")
+
+-- Completion
+imap("<Tab>", "v:lua.tab_complete()")
+smap("<Tab>", "v:lua.tab_complete()")
+imap("<S-Tab>", "v:lua.s_tab_complete()")
+smap("<S-Tab>", "v:lua.s_tab_complete()")
+
+-- Telescope
+nmap("<Leader>ff", [[<Cmd>lua require('telescope.builtin').find_files()<CR>]])
+nmap("<Leader>fb", [[<Cmd>lua require('telescope.builtin').buffers()<CR>]])
+nmap("<Leader>fh", [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]])
+nmap("<Leader>fo", [[<Cmd>lua require('telescope.builtin').oldfiles()<CR>]])
+nmap("<Leader>fm", [[<Cmd> Neoformat<CR>]])
 
 -- Git
-vim.api.nvim_set_keymap("n", "<Leader>gs", ":G<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>ga", ":Git add .<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>gc", ":G commit<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>gpl", ":G pull<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>gps", ":G push<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>gh", ":diffget //2<CR>", Keymap_options)
-vim.api.nvim_set_keymap("n", "<Leader>gl", ":diffget //3<CR>", Keymap_options)
+nmap("<Leader>gs", ":G<CR>")
+nmap("<Leader>ga", ":Git add .<CR>")
+nmap("<Leader>gc", ":G commit<CR>")
+nmap("<Leader>gpl", ":G pull<CR>")
+nmap("<Leader>gps", ":G push<CR>")
+nmap("<Leader>gh", ":diffget //2<CR>")
+nmap("<Leader>gl", ":diffget //3<CR>")

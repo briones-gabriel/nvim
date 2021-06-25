@@ -18,6 +18,3 @@ require("zen-mode").setup {
         tmux = true, -- disables the tmux statusline
     },
 }
-
----- Keybindings
-vim.api.nvim_set_keymap("n", "<Leader>z", ":ZenMode<CR>", Keymap_options)

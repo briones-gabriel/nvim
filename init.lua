@@ -1,4 +1,5 @@
 -- Common config
+require("utils")
 require("plugins")
 require("settings")
 require("keybindings")
@@ -17,5 +18,4 @@ require("nv-zen-mode")
 require("nv-lspkind")
 require("nv-bufferline")
 require("nv-pears")
-require("nv-base16")
 require("nv-startify")
