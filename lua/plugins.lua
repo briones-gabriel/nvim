@@ -66,6 +66,7 @@ function()
 
     -- Autopairs
     use "windwp/nvim-autopairs"
+    use "windwp/nvim-ts-autotag"
 
     -- Startify
     use "mhinz/vim-startify"

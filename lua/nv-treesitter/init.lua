@@ -11,6 +11,9 @@ require("nvim-treesitter.configs").setup {
         "lua",
         "bash"
     },
+    autotag = {
+        enable = true,
+    },
     highlight = {
         enable = true,
         disable = { "c", "rust" }
