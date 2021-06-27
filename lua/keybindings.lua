@@ -31,12 +31,6 @@ nmap("<Leader>z", ":ZenMode<CR>")
 nmap("<Leader>/", ":CommentToggle<CR>")
 vmap("<Leader>/", ":CommentToggle<CR>")
 
--- Folding
-nmap("fo", "zo")
-nmap("fc", "zc")
-nmap("fr", "zR")
-nmap("fm", "zM")
-
 -- Completion
 imap("<Tab>", "v:lua.tab_complete()")
 smap("<Tab>", "v:lua.tab_complete()")
@@ -48,6 +42,8 @@ nmap("<Leader>ff", [[<Cmd>lua require('telescope.builtin').find_files()<CR>]])
 nmap("<Leader>fb", [[<Cmd>lua require('telescope.builtin').buffers()<CR>]])
 nmap("<Leader>fh", [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]])
 nmap("<Leader>fo", [[<Cmd>lua require('telescope.builtin').oldfiles()<CR>]])
+
+-- Formatting
 nmap("<Leader>fm", [[<Cmd> Neoformat<CR>]])
 
 -- Git

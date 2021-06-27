@@ -1,10 +1,10 @@
 -- Options
-require('compe').setup {
+require("compe").setup {
     enabled = true;
     autocomplete = true;
     debug = false;
-    min_length = 2;
-    preselect = 'enable';
+    min_length = 1;
+    preselect = "enable";
     throttle_time = 80;
     source_timeout = 200;
     incomplete_delay = 400;
@@ -13,9 +13,12 @@ require('compe').setup {
     max_menu_width = 100;
     documentation = true;
     source = {
-        nvim_lsp = true;
-        vsnip = { kind = "﬌" };
-        buffer = { kind = "﬘", true };
+        nvim_lsp = { kind = "" },
+        path = { kind = "" },
+        vsnip = { kind = "﬌" },
+        buffer = { kind = "﬘" },
+        spell = { kind = "" },
+        calc = { kind = "" },
     };
 }
 

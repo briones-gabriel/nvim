@@ -11,7 +11,6 @@ g.updatetime = 100
 g.shortmess:append { c = true }
 g.clipboard = "unnamedplus"
 g.fillchars = { eob = " " }
-vim.g.indentLine_char = "▏"
 
 -- Window
 g.relativenumber = true
