@@ -44,9 +44,6 @@ function()
     -- NvimTree
     use "kyazdani42/nvim-tree.lua"
 
-    -- Vim Maximizer
-    use "szw/vim-maximizer"
-
     -- LSP
     use "neovim/nvim-lspconfig"
     use "onsails/lspkind-nvim"
@@ -68,7 +65,7 @@ function()
     use "akinsho/nvim-bufferline.lua"
 
     -- Autopairs
-    use "steelsojka/pears.nvim"
+    use "windwp/nvim-autopairs"
 
     -- Startify
     use "mhinz/vim-startify"
