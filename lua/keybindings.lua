@@ -39,9 +39,6 @@ smap("<S-Tab>", "v:lua.s_tab_complete()")
 -- Telescope
 nmap("<Leader>ff", [[<Cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>]])
 
--- Formatting
-nmap("<Leader>fm", [[<Cmd> Neoformat<CR>]])
-
 -- Git
 nmap("<Leader>gs", ":G<CR>")
 nmap("<Leader>ga", ":Git add .<CR>")
