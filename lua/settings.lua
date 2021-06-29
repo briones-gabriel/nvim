@@ -38,4 +38,3 @@ vim.g.mapleader = " "
 vim.b.mapleader = " "
 
 cmd("colorscheme base16-onedark")
---cmd("colorscheme nvcode")

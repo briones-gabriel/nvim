@@ -32,14 +32,20 @@ function()
     use "kyazdani42/nvim-web-devicons"
 
     -- Telescope
-    use "nvim-telescope/telescope.nvim"
-    use "nvim-lua/popup.nvim"
-    use "nvim-lua/plenary.nvim"
-    use "nvim-telescope/telescope-fzy-native.nvim"
+    use {
+        "nvim-telescope/telescope.nvim",
+        requires = {
+            {"nvim-lua/popup.nvim"},
+            {"nvim-lua/plenary.nvim"},
+            {"nvim-telescope/telescope-fzy-native.nvim"},
+        },
+    }
 
     -- Indent lines
-    --use "Yggdroot/indentLine"
-    use { "lukas-reineke/indent-blankline.nvim", branch = "lua" }
+    use {
+        "lukas-reineke/indent-blankline.nvim",
+        branch = "lua",
+    }
 
     -- NvimTree
     use "kyazdani42/nvim-tree.lua"
@@ -50,10 +56,16 @@ function()
     use "hrsh7th/nvim-compe"
     use "hrsh7th/vim-vsnip"
     use "kabouzeid/nvim-lspinstall"
-    use { "kkoomen/vim-doge", run = ":call doge#install()" }
+    use {
+        "kkoomen/vim-doge",
+        run = ":call doge#install()"
+    }
 
     -- Treesitter
-    use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate"
+    }
 
     -- TODO Comments
     use "folke/todo-comments.nvim"
@@ -70,6 +82,5 @@ function()
 
     -- Startify
     use "mhinz/vim-startify"
-    use "christianchiarulli/nvcode-color-schemes.vim"
 end
 )

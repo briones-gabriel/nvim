@@ -37,10 +37,7 @@ imap("<S-Tab>", "v:lua.s_tab_complete()")
 smap("<S-Tab>", "v:lua.s_tab_complete()")
 
 -- Telescope
-nmap("<Leader>ff", [[<Cmd>lua require('telescope.builtin').find_files()<CR>]])
-nmap("<Leader>fb", [[<Cmd>lua require('telescope.builtin').buffers()<CR>]])
-nmap("<Leader>fh", [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]])
-nmap("<Leader>fo", [[<Cmd>lua require('telescope.builtin').oldfiles()<CR>]])
+nmap("<Leader>ff", [[<Cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>]])
 
 -- Formatting
 nmap("<Leader>fm", [[<Cmd> Neoformat<CR>]])

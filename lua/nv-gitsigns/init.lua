@@ -33,6 +33,6 @@ require('gitsigns').setup {
     use_internal_diff = true,  -- If luajit is present
 }
 
-vim.cmd("hi GitAdd guifg=#8fa867")
-vim.cmd("hi GitChange guifg=#ffc66b")
-vim.cmd("hi GitDelete guifg=#e74946")
+cmd("hi GitAdd guifg=#8fa867")
+cmd("hi GitChange guifg=#ffc66b")
+cmd("hi GitDelete guifg=#e74946")
