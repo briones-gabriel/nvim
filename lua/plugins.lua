@@ -1,86 +1,86 @@
 -- Packer Bootstrapping
+local use = require("packer").use
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
 local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 
 if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({"git", "clone", "https://github.com/wbthomason/packer.nvim", install_path})
-    execute "packadd packer.nvim"
+	fn.system({"git", "clone", "https://github.com/wbthomason/packer.nvim", install_path})
+	execute "packadd packer.nvim"
 end
-
-local use = require("packer").use
 
 require("packer").startup(
-function()
-    use "wbthomason/packer.nvim"
+	function()
+		use "wbthomason/packer.nvim"
 
-    -- Colorscheme
-    use "RRethy/nvim-base16"
+		-- Colorscheme
+		use "RRethy/nvim-base16"
 
-    -- Git
-    use "lewis6991/gitsigns.nvim"
-    use "tpope/vim-fugitive"
+		-- Git
+		use "lewis6991/gitsigns.nvim"
 
-    -- Nvim Comment
-    use "terrortylor/nvim-comment"
+		use "tpope/vim-fugitive"
 
-    -- Lualine
-    use "hoob3rt/lualine.nvim"
+		-- Nvim Comment
+		use "terrortylor/nvim-comment"
 
-    -- Icons
-    use "kyazdani42/nvim-web-devicons"
+		-- Lualine
+		use "hoob3rt/lualine.nvim"
 
-    -- Telescope
-    use {
-        "nvim-telescope/telescope.nvim",
-        requires = {
-            {"nvim-lua/popup.nvim"},
-            {"nvim-lua/plenary.nvim"},
-            {"nvim-telescope/telescope-fzy-native.nvim"},
-        },
-    }
+		-- Icons
+		use "kyazdani42/nvim-web-devicons"
 
-    -- Indent lines
-    use {
-        "lukas-reineke/indent-blankline.nvim",
-        branch = "lua",
-    }
+		-- Telescope
+		use {
+			"nvim-telescope/telescope.nvim",
+			requires = {
+				{"nvim-lua/popup.nvim"},
+				{"nvim-lua/plenary.nvim"},
+				{"nvim-telescope/telescope-fzy-native.nvim"},
+			},
+		}
 
-    -- NvimTree
-    use "kyazdani42/nvim-tree.lua"
+		-- Indent lines
+		use {
+			"lukas-reineke/indent-blankline.nvim",
+			branch = "lua",
+		}
 
-    -- LSP
-    use "neovim/nvim-lspconfig"
-    use "onsails/lspkind-nvim"
-    use "hrsh7th/nvim-compe"
-    use "hrsh7th/vim-vsnip"
-    use "kabouzeid/nvim-lspinstall"
-    use {
-        "kkoomen/vim-doge",
-        run = ":call doge#install()"
-    }
+		-- NvimTree
+		use "kyazdani42/nvim-tree.lua"
 
-    -- Treesitter
-    use {
-        "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate"
-    }
+		-- LSP
+		use "neovim/nvim-lspconfig"
+		use "onsails/lspkind-nvim"
+		use "hrsh7th/nvim-compe"
+		use "hrsh7th/vim-vsnip"
+		use "kabouzeid/nvim-lspinstall"
+		use {
+			"kkoomen/vim-doge",
+			run = ":call doge#install()"
+		}
 
-    -- TODO Comments
-    use "folke/todo-comments.nvim"
+		-- Treesitter
+		use {
+			"nvim-treesitter/nvim-treesitter",
+			run = ":TSUpdate"
+		}
 
-    -- Zen Mode
-    use "folke/zen-mode.nvim"
+		-- TODO Comments
+		use "folke/todo-comments.nvim"
 
-    -- Buffer line
-    use "akinsho/nvim-bufferline.lua"
+		-- Zen Mode
+		use "folke/zen-mode.nvim"
 
-    -- Autopairs
-    use "windwp/nvim-autopairs"
-    use "windwp/nvim-ts-autotag"
+		-- Buffer line
+		use "akinsho/nvim-bufferline.lua"
 
-    -- Startify
-    use "mhinz/vim-startify"
-end
+		-- Autopairs
+		use "windwp/nvim-autopairs"
+		use "windwp/nvim-ts-autotag"
+
+		-- Startify
+		use "mhinz/vim-startify"
+	end
 )
