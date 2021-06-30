@@ -1,22 +1,22 @@
 -- Common config
-require("utils")
-require("plugins")
-require("settings")
-require("keybindings")
+require "utils"
+require "plugins"
+require "settings"
+require "keymaps"
 
 -- Plugins config
-require("nv-gitsigns")
-require("nv-lualine")
-require("nv-tree")
-require("nv-treesitter")
-require("nv-lspconfig")
-require("nv-compe")
-require("nv-comment")
-require("nv-telescope")
-require("nv-todo-comments")
-require("nv-zen-mode")
-require("nv-lspkind")
-require("nv-bufferline")
-require("nv-startify")
-require("nv-blankline")
-require("nv-autopairs")
+require "nv-gitsigns"
+require "nv-lualine"
+require "nv-tree"
+require "nv-treesitter"
+require "nv-lspconfig"
+require "nv-compe"
+require "nv-comment"
+require "nv-telescope"
+require "nv-todo-comments"
+require "nv-zen-mode"
+require "nv-lspkind"
+require "nv-bufferline"
+require "nv-startify"
+require "nv-blankline"
+require "nv-autopairs"

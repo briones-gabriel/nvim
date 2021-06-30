@@ -1,10 +1,21 @@
 -- Global variable
 _G.g = vim.opt
 _G.vimg = vim.g
+DATA_PATH = vim.fn.stdpath('data')
 
 -- Map in normal mode
 _G.nmap = function(keymap, command)
     vim.api.nvim_set_keymap("n", keymap, command, { noremap = true, silent = true })
+end
+
+-- Map in normal mode (for buffer)
+_G.bmap = function(bufnr, ...)
+    vim.api.nvim_buf_set_keymap(bufnr, ...)
+end
+
+-- Sign define
+_G.sdef = function(...)
+    vim.fn.sign_define(...)
 end
 
 -- Map in visual mode
@@ -64,3 +75,10 @@ _G.s_tab_complete = function()
     end
 end
 
+-- Set tabs
+_G.set_tabs = function(tabsnr)
+    g.tabstop = tabsnr
+    g.tabstop = tabsnr
+    g.shiftwidth = tabsnr
+    g.shiftwidth = tabsnr
+end

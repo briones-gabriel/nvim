@@ -1,45 +1,18 @@
-function on_attach(client, bufnr)
-    local function buf_set_keymap(...)
-        vim.api.nvim_buf_set_keymap(bufnr, ...)
-    end
-    local function buf_set_option(...)
-        vim.api.nvim_buf_set_option(bufnr, ...)
-    end
-
-    buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
-
-    -- Mappings.
-    local opts = {noremap = true, silent = true}
-
-    buf_set_keymap("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-    buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
-    buf_set_keymap("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)
-    buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-    buf_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-    buf_set_keymap("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-    buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-    buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-    buf_set_keymap("n", "<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
-    buf_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
-    buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
-    buf_set_keymap("n", "<space>ll", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
-    buf_set_keymap("n", "<M-CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-
+local function on_attach(client, bufnr)
     -- Set some keybinds conditional on server capabilities
     if client.resolved_capabilities.document_formatting then
-        buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+        bmap(bufnr, "<Leader>fm", "<cmd>lua vim.lsp.buf.formatting()<CR>")
     elseif client.resolved_capabilities.document_range_formatting then
-        buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
+        bmap(bufnr, "<Leader>fm", "<cmd>lua vim.lsp.buf.range_formatting()<CR>")
     end
 end
 
--- lspInstall + lspconfig stuff
-
+-- LspInstall + LspConfig
 local function setup_servers()
     require "lspinstall".setup()
 
     local lspconf = require("lspconfig")
-    local servers = require "lspinstall".installed_servers()
+    local servers = require("lspinstall").installed_servers()
 
     for _, lang in pairs(servers) do
         if lang ~= "lua" then
@@ -55,7 +28,7 @@ local function setup_servers()
                 settings = {
                     Lua = {
                         diagnostics = {
-                            globals = {"vim"}
+                            globals = { "vim" }
                         },
                         workspace = {
                             library = {
@@ -75,14 +48,56 @@ end
 
 setup_servers()
 
--- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
-require "lspinstall".post_install_hook = function()
-    setup_servers() -- reload installed servers
-    vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
-end
+-- Formatters and linters
+local prettier = {
+    formatCommand = "prettier --stdin-filepath ${ INPUT }",
+    formatStdin = true
+}
+
+local eslint = {
+    lintCommand = "./node_modules/.bin/eslint -f unix --stdin --stdin-filename ${ INPUT }",
+    lintIgnoreExitCode = true,
+    lintStdin = true,
+    lintFormats = { "%f:%l:%c: %m" },
+    formatCommand = "./node_modules/.bin/eslint --fix-to-stdout --stdin --stdin-filename=${ INPUT }",
+    formatStdin = true
+}
+
+local js_args = {}
+table.insert(js_args, prettier)
+table.insert(js_args, eslint)
+
+require("lspconfig").efm.setup {
+    cmd = { DATA_PATH .. "/lspinstall/efm/efm-langserver" },
+    init_options = {
+        documentFormatting = true,
+        codeAction = true
+    },
+    filetypes = {
+        "javascriptreact",
+        "javascript",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "css",
+        "vue"
+    },
+    settings = {
+        rootMarkers = { ".git/" },
+        languages = {
+            javascript = js_args,
+            javascriptreact = js_args,
+            typescript = js_args,
+            typescriptreact = js_args,
+            html = { prettier },
+            css = { prettier },
+            json = { prettier },
+        }
+    }
+}
 
 -- replace the default lsp diagnostic letters with prettier symbols
-vim.fn.sign_define("LspDiagnosticsSignError", {text = "", numhl = "LspDiagnosticsDefaultError"})
-vim.fn.sign_define("LspDiagnosticsSignWarning", {text = "", numhl = "LspDiagnosticsDefaultWarning"})
-vim.fn.sign_define("LspDiagnosticsSignInformation", {text = "", numhl = "LspDiagnosticsDefaultInformation"})
-vim.fn.sign_define("LspDiagnosticsSignHint", {text = "", numhl = "LspDiagnosticsDefaultHint"})
+sdef("LspDiagnosticsSignError", { text = "", numhl = "LspDiagnosticsDefaultError" })
+sdef("LspDiagnosticsSignWarning", { text = "", numhl = "LspDiagnosticsDefaultWarning" })
+sdef("LspDiagnosticsSignInformation", { text = "", numhl = "LspDiagnosticsDefaultInformation" })
+sdef("LspDiagnosticsSignHint", { text = "", numhl = "LspDiagnosticsDefaultHint" })

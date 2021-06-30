@@ -14,6 +14,7 @@ g.fillchars = { eob = " " }
 
 -- Window
 g.relativenumber = true
+g.numberwidth = 2
 g.cursorline = true
 g.number = true
 g.wrap = false
@@ -26,15 +27,24 @@ g.foldmethod = "indent"
 g.colorcolumn = "120"
 g.completeopt = "menuone,noselect"
 
--- Buffer
-g.expandtab = true
-g.tabstop = 4
-g.tabstop = 4
-g.shiftwidth = 4
-g.shiftwidth = 4
+-- Disable builtin vim plugins
+vimg.loaded_gzip = 0
+vimg.loaded_tar = 0
+vimg.loaded_tarPlugin = 0
+vimg.loaded_zipPlugin = 0
+vimg.loaded_2html_plugin = 0
+vimg.loaded_netrw = 0
+vimg.loaded_netrwPlugin = 0
+vimg.loaded_matchit = 0
+vimg.loaded_matchparen = 0
+vimg.loaded_spec = 0
+
+-- Tabs
+set_tabs(2)
 
 -- Leader
 vim.g.mapleader = " "
 vim.b.mapleader = " "
 
+-- Colorscheme
 cmd("colorscheme base16-onedark")

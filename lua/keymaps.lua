@@ -1,6 +1,7 @@
 -- Common keybindings
 nmap("<Leader>w", ":w<CR>")
 nmap("<Leader>q", ":q<CR>")
+nmap("<Leader>st", ":lua set_tabs()")
 
 -- Buffer control
 nmap("<Leader>+", ":vertical resize +15<CR>")
@@ -47,3 +48,18 @@ nmap("<Leader>gpl", ":G pull<CR>")
 nmap("<Leader>gps", ":G push<CR>")
 nmap("<Leader>gh", ":diffget //2<CR>")
 nmap("<Leader>gl", ":diffget //3<CR>")
+
+-- LSP
+nmap("gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>")
+nmap("gd", "<Cmd>lua vim.lsp.buf.definition()<CR>")
+nmap("K", "<Cmd>lua vim.lsp.buf.hover()<CR>")
+nmap("gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
+nmap("<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
+nmap("<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>")
+nmap("<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
+nmap("gr", "<cmd>lua vim.lsp.buf.references()<CR>")
+nmap("<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>")
+nmap("[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>")
+nmap("]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>")
+nmap("<space>ll", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>")
+nmap("<M-CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>")
