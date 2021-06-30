@@ -1,7 +1,8 @@
 -- Common keybindings
 nmap("<Leader>w", ":w<CR>")
 nmap("<Leader>q", ":q<CR>")
-nmap("<Leader>st", ":lua set_tabs()")
+nmap("<Leader>st2", ":lua set_tabs(2)<CR>")
+nmap("<Leader>st4", ":lua set_tabs(4)<CR>")
 
 -- Buffer control
 nmap("<Leader>+", ":vertical resize +15<CR>")
