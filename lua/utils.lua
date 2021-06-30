@@ -8,11 +8,6 @@ _G.nmap = function(keymap, command)
     vim.api.nvim_set_keymap("n", keymap, command, { noremap = true, silent = true })
 end
 
--- Map in normal mode (for buffer)
-_G.bmap = function(bufnr, ...)
-    vim.api.nvim_buf_set_keymap(bufnr, ...)
-end
-
 -- Sign define
 _G.sdef = function(...)
     vim.fn.sign_define(...)

@@ -1,9 +1,9 @@
-local function on_attach(client, bufnr)
+local function on_attach(client)
     -- Set some keybinds conditional on server capabilities
     if client.resolved_capabilities.document_formatting then
-        bmap(bufnr, "<Leader>fm", "<cmd>lua vim.lsp.buf.formatting()<CR>")
+        nmap("<Leader>fm", "<cmd>lua vim.lsp.buf.formatting()<CR>")
     elseif client.resolved_capabilities.document_range_formatting then
-        bmap(bufnr, "<Leader>fm", "<cmd>lua vim.lsp.buf.range_formatting()<CR>")
+        vmap("<Leader>fm", "<cmd>lua vim.lsp.buf.range_formatting()<CR>")
     end
 end
 
