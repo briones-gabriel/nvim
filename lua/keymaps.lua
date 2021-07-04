@@ -29,7 +29,7 @@ nmap("<C-[>", ":BufferLineMovePrev<CR>")
 nmap("<Leader>z", ":ZenMode<CR>")
 
 -- Commenting
-nmap("<Leader>/", ":CommentToggle<CR>")
+nmap("<Leader>/", "<cmd>CommentToggle<CR>")
 vmap("<Leader>/", ":CommentToggle<CR>")
 
 -- Completion

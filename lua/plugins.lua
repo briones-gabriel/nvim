@@ -1,5 +1,4 @@
 -- Packer Bootstrapping
-local use = require("packer").use
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -11,7 +10,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 require("packer").startup(
-	function()
+	function(use)
 		use "wbthomason/packer.nvim"
 
 		-- Colorscheme
@@ -42,10 +41,7 @@ require("packer").startup(
 		}
 
 		-- Indent lines
-		use {
-			"lukas-reineke/indent-blankline.nvim",
-			branch = "lua",
-		}
+		use {"lukas-reineke/indent-blankline.nvim"}
 
 		-- NvimTree
 		use "kyazdani42/nvim-tree.lua"

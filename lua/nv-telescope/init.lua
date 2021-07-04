@@ -9,7 +9,6 @@ require("telescope").setup {
             "--column",
             "--smart-case"
         },
-        prompt_position = "bottom",
         prompt_prefix = " ",
         selection_caret = " ",
         entry_prefix = "  ",
@@ -22,7 +21,6 @@ require("telescope").setup {
         generic_sorter = require "telescope.sorters".get_generic_fuzzy_sorter,
         shorten_path = true,
         winblend = 0,
-        height = 0.25,
         border = {},
         borderchars = {"─", "│", "─", "│", "╭", "╮", "╯", "╰"},
         color_devicons = false,
