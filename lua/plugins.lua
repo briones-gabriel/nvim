@@ -23,7 +23,7 @@ require("packer").startup(function (use)
 	--- GIT ---
 	use {
 		"lewis6991/gitsigns.nvim",
-		config = require "plugins.nv-gitsigns"
+		config = function () require "plugins.nv-gitsigns" end,
 	}
 	use {
     "tpope/vim-fugitive"
@@ -32,39 +32,42 @@ require("packer").startup(function (use)
 	--- COMMENTS ---
 	use {
 		"terrortylor/nvim-comment",
-		config = require "plugins.nv-comment",
+		config = function () require "plugins.nv-comment" end,
 	}
 
 	--- CORE PLUGINS ---
 	use {
 		"hoob3rt/lualine.nvim",
-		config = require "plugins.nv-lualine",
+		config = function () require "plugins.nv-lualine" end,
 	}
 	use {
 		"lukas-reineke/indent-blankline.nvim",
-		config = require "plugins.nv-blankline",
+		config = function () require "plugins.nv-blankline" end,
 	}
 	use {
 		"kyazdani42/nvim-tree.lua",
-		config = require "plugins.nv-tree",
+		config = function () require "plugins.nv-tree" end,
 	}
   use {
     "alvarosevilla95/luatab.nvim",
-    config = require "plugins.nv-luatab"
+    config = function () require "plugins.nv-luatab" end,
   }
 	use {
     "kyazdani42/nvim-web-devicons"
+  }
+  use {
+    "tjdevries/astronauta.nvim"
   }
 
 	--- TREESITTER ---
 	use {
 		"nvim-treesitter/nvim-treesitter",
-		config = require "plugins.nv-treesitter",
+		config = function () require "plugins.nv-treesitter" end,
 		run = ":TSUpdate",
 	}
 	use {
 		"windwp/nvim-autopairs",
-		config = require "plugins.nv-autopairs"
+		config = function () require "plugins.nv-autopairs" end,
 	}
 	use {
     "windwp/nvim-ts-autotag"
@@ -78,7 +81,7 @@ require("packer").startup(function (use)
 	--- TELESCOPE ---
 	use {
 		"nvim-telescope/telescope.nvim",
-		config = require "plugins.nv-telescope",
+		config = function () require "plugins.nv-telescope" end,
 		requires = {
 			{"nvim-lua/popup.nvim"},
 			{"nvim-lua/plenary.nvim"},
@@ -89,15 +92,15 @@ require("packer").startup(function (use)
 	--- LSP ---
 	use {
 		"hrsh7th/vim-vsnip",
-		config = require "plugins.nv-vsnip"
+		config = function () require "plugins.nv-vsnip" end,
 	}
 	use {
 		"hrsh7th/nvim-compe",
-		config = require "plugins.nv-compe"
+		config = function () require "plugins.nv-compe" end,
 	}
 	use {
 		"neovim/nvim-lspconfig",
-		config = require "plugins.lsp"
+		config = function () require "plugins.lsp" end,
 	}
 	use {
     "kabouzeid/nvim-lspinstall"
