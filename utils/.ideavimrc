@@ -1,0 +1,54 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Plugins ---------------------------------
+set NERDTree
+
+""" Common settings -------------------------
+set number
+set relativenumber
+set clipboard=unnamedplus
+set clipboard+=ideaput
+set showmode
+set ruler
+set so=5
+set incsearch
+set nu
+set scrolloff=4
+map Q gq
+set showmatch
+set hidden
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+set ideamarks
+
+""" Mappings --------------------------------
+nmap <Leader>w :w<CR>
+nmap <Leader>q :q<CR>
+
+:map ,d <Action>(Debug)
+:map ,s <Action>(Stop)
+:map ,r <Action>(Run)
+
+:map <leader>T <Action>(TabsActions)
+:map <C-l> <Action>(NextTab)
+:map <C-h> <Action>(PreviousTab)
+
+:map <leader>u <Action>(FindUsages)
+:map <leader>f <Action>(GotoFile)
+:map <leader>rn <Action>(RenameElement)
+:map <leader>oi <Action>(OptimizeImports)
+:map <leader>c <Action>(GotoClass)
+:map <leader>e <Action>(ShowErrorDescription)
+
+:map <leader>k <Action>(ToggleFullScreen)
+:map <leader>ot <Action>(ActivateTerminalToolWindow)
+
+:map <leader>t :NERDTreeFind<CR>
+
+:map <leader>/ <Action>(CommentByLineComment)
+:map <S-k> <Action>(MoveLineUp)
+:map <S-j> <Action>(MoveLineDown)

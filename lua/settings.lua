@@ -26,7 +26,7 @@ opt.scrolloff       = 4                                                        -
 opt.sidescrolloff   = 4                                                        --- Lines to scroll horizontally
 opt.cmdheight       = 1    				                                             --- Give more space for displaying messages
 opt.conceallevel    = 0                                                        --- so that `` is visible in markdown files
-opt.undodir         = PATH .. "/utils/undo"                                    --- Dir for undos
+opt.undodir         = PATH .. "/utils/.undo"                                    --- Dir for undos
 --opt.shm:append        {"c", "a", "W", "I", "o", "O", "f", "F", "m"}
 --opt.fo:remove         {"c", "r", "o"}
 opt.completeopt     = {"menuone", "noselect"}                                  --- Recommended by nvim-compe
