@@ -27,8 +27,6 @@ opt.sidescrolloff   = 4                                                        -
 opt.cmdheight       = 1    				                                             --- Give more space for displaying messages
 opt.conceallevel    = 0                                                        --- so that `` is visible in markdown files
 opt.undodir         = PATH .. "/utils/.undo"                                    --- Dir for undos
---opt.shm:append        {"c", "a", "W", "I", "o", "O", "f", "F", "m"}
---opt.fo:remove         {"c", "r", "o"}
 opt.completeopt     = {"menuone", "noselect"}                                  --- Recommended by nvim-compe
 opt.wildignore      = {"**/node_modules/**", "**/.idea/**", "**/.git/**"}      --- Don't search inside Node.js modules (works for gutentag)
 opt.clipboard       = {"unnamed", "unnamedplus"}                               --- Copy-paste between vim and everything else
