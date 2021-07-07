@@ -1,92 +1,91 @@
-local plugins = {
+--- PACKER PLUGINS MANAGEMENT ---
+local execute = vim.api.nvim_command
+local fn = vim.fn
+
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+
+if fn.empty(fn.glob(install_path)) > 0 then
+  fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
+  execute 'packadd packer.nvim'
+end
+
+require("packer").startup(function (use)
 	--- PACKER ---
-	{"wbthomason/packer.nvim"},
+	use {"wbthomason/packer.nvim"}
 
 	--- COLORSCHEMES ---
-	{"RRethy/nvim-base16"},
+	use {"RRethy/nvim-base16"}
 
 	--- GIT ---
-	{
+	use {
 		"lewis6991/gitsigns.nvim",
-		config = require "plugins.nv-gitsigns",
-	},
-	{"tpope/vim-fugitive"},
+		config = require "plugins.nv-gitsigns"
+	}
+	use {"tpope/vim-fugitive"}
 
 	--- COMMENTS ---
-	{
+	use {
 		"terrortylor/nvim-comment",
 		config = require "plugins.nv-comment",
-	},
+	}
 
 	--- CORE PLUGINS ---
-	{
+	use {
 		"hoob3rt/lualine.nvim",
 		config = require "plugins.nv-lualine",
-	},
-	{
+	}
+	use {
 		"lukas-reineke/indent-blankline.nvim",
 		config = require "plugins.nv-blankline",
-	},
-	{
+	}
+	use {
 		"kyazdani42/nvim-tree.lua",
 		config = require "plugins.nv-tree",
-	},
-  {
+	}
+  use {
     "alvarosevilla95/luatab.nvim",
     config = require "plugins.nv-luatab"
-  },
-	{"kyazdani42/nvim-web-devicons"},
+  }
+	use {"kyazdani42/nvim-web-devicons"}
 
 	--- TREESITTER ---
-	{
+	use {
 		"nvim-treesitter/nvim-treesitter",
 		config = require "plugins.nv-treesitter",
 		run = ":TSUpdate",
-	},
-	{
+	}
+	use {
 		"windwp/nvim-autopairs",
 		config = require "plugins.nv-autopairs"
-	},
-	{"windwp/nvim-ts-autotag"},
+	}
+	use {"windwp/nvim-ts-autotag"}
 
 	--- STARTIFY ---
-	{"mhinz/vim-startify"},
+	use {"mhinz/vim-startify"}
 
 	--- TELESCOPE ---
-	{
+	use {
 		"nvim-telescope/telescope.nvim",
 		config = require "plugins.nv-telescope",
 		requires = {
 			{"nvim-lua/popup.nvim"},
 			{"nvim-lua/plenary.nvim"},
 			{"nvim-telescope/telescope-fzy-native.nvim"},
-		},
-	},
+		}
+	}
 
 	--- LSP ---
-	{
+	use {
 		"hrsh7th/vim-vsnip",
-		config = require "plugins.nv-vsnip",
-	},
-	{
+		config = require "plugins.nv-vsnip"
+	}
+	use {
 		"hrsh7th/nvim-compe",
-		config = require "plugins.nv-compe",
-	},
-	{
+		config = require "plugins.nv-compe"
+	}
+	use {
 		"neovim/nvim-lspconfig",
-		config = require "plugins.lsp",
-	},
-	{"kabouzeid/nvim-lspinstall"},
-}
-
---- PACKER PLUGINS MANAGEMENT ---
-local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
-
-if fn.empty(fn.glob(install_path)) > 0 then
-	fn.system({"git", "clone", "https://github.com/wbthomason/packer.nvim", install_path})
-	vim.api.nvim_command("packadd packer.nvim")
-end
-
-require("packer").startup(function (use)
-  use(plugins)
+		config = require "plugins.lsp"
+	}
+	use {"kabouzeid/nvim-lspinstall"}
 end)
