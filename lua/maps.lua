@@ -34,12 +34,3 @@ map("n",    "<Leader>gc",   ":G commit<CR>")
 map("n",    "<Leader>ga",   ":Git add .<CR>")
 map("n",    "<Leader>gh",   ":diffget //2<CR>")
 map("n",    "<Leader>gl",   ":diffget //3<CR>")
-
---- COMPLETION ---
-cmap("i",    "<CR>",        "compe#confirm('<CR>')",     {expr = true})
-cmap("i",    "<C-Leader>",  "compe#complete()",          {expr = true})
-cmap("i",    "<C-e>",       "compe#close(\'<c-e>\')",    {expr = true})
-cmap("i",   "<Tab>",        "v:lua.tab_complete()",      {expr = true})
-cmap("s",   "<Tab>",        "v:lua.tab_complete()",      {expr = true})
-cmap("i",   "<S-Tab>",      "v:lua.s_tab_complete()",    {expr = true})
-cmap("s",   "<S-Tab>",      "v:lua.s_tab_complete()",    {expr = true})

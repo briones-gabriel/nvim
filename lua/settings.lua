@@ -54,7 +54,7 @@ vim.b.mapleader = " "
 --- FUNCTIONS ---
 cmd("colorscheme base16-onedark")
 cmd("filetype plugin indent on")
---cmd("set shortmess+=c")                                                        --- " Don't pass messages to |ins-completion-menu|
---cmd("set formatoptions-=c")                                                    --- " Stop newline continuation of comments
---cmd("set formatoptions-=r")
---cmd("set formatoptions-=o")
+cmd("set shortmess+=c")                                                        --- " Don't pass messages to |ins-completion-menu|
+cmd("set formatoptions-=c")                                                    --- " Stop newline continuation of comments
+cmd("set formatoptions-=r")
+cmd("set formatoptions-=o")

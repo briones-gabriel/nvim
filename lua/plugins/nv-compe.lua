@@ -12,7 +12,7 @@ require("compe").setup {
 	max_kind_width      = 100;
 	max_menu_width      = 100;
 	documentation = {
-		border            = { "", "" ,"", " ", "", "", "", " " },
+		border            = "",
 		winhighlight      = "NormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder",
 		max_width         = 120,
 		min_width         = 60,
@@ -21,9 +21,50 @@ require("compe").setup {
 	},
 	source = {
 		nvim_lsp          = { kind = "" },
-		path              = { kind = "" },
 		vsnip             = { kind = "﬌" },
+		path              = { kind = "" },
 		buffer            = { kind = "﬘" },
 		spell             = { kind = "" },
 	},
 }
+
+--- TAB FUNCTIONS ---
+local t = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+    local col = vim.fn.col('.') - 1
+    return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
+end
+
+_G.tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-n>"
+  elseif vim.fn['vsnip#available'](1) == 1 then
+    return t "<Plug>(vsnip-expand-or-jump)"
+  elseif check_back_space() then
+    return t "<Tab>"
+  else
+    return vim.fn['compe#complete']()
+  end
+end
+
+_G.s_tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-p>"
+  elseif vim.fn['vsnip#jumpable'](-1) == 1 then
+    return t "<Plug>(vsnip-jump-prev)"
+  else
+    return t "<S-Tab>"
+  end
+end
+
+--- MAPS ---
+cmap("i",    "<CR>",        "compe#confirm('<CR>')",     {expr = true})
+cmap("i",    "<C-space>",   "compe#complete()",          {expr = true})
+cmap("i",    "<C-e>",       "compe#close(\'<c-e>\')",    {expr = true})
+cmap("i",    "<Tab>",       "v:lua.tab_complete()",      {expr = true})
+cmap("s",    "<Tab>",       "v:lua.tab_complete()",      {expr = true})
+cmap("i",    "<S-Tab>",     "v:lua.s_tab_complete()",    {expr = true})
+cmap("s",    "<S-Tab>",     "v:lua.s_tab_complete()",    {expr = true})

@@ -11,17 +11,23 @@ end
 
 require("packer").startup(function (use)
 	--- PACKER ---
-	use {"wbthomason/packer.nvim"}
+	use {
+    "wbthomason/packer.nvim"
+  }
 
 	--- COLORSCHEMES ---
-	use {"RRethy/nvim-base16"}
+	use {
+    "RRethy/nvim-base16"
+  }
 
 	--- GIT ---
 	use {
 		"lewis6991/gitsigns.nvim",
 		config = require "plugins.nv-gitsigns"
 	}
-	use {"tpope/vim-fugitive"}
+	use {
+    "tpope/vim-fugitive"
+  }
 
 	--- COMMENTS ---
 	use {
@@ -46,7 +52,9 @@ require("packer").startup(function (use)
     "alvarosevilla95/luatab.nvim",
     config = require "plugins.nv-luatab"
   }
-	use {"kyazdani42/nvim-web-devicons"}
+	use {
+    "kyazdani42/nvim-web-devicons"
+  }
 
 	--- TREESITTER ---
 	use {
@@ -58,10 +66,14 @@ require("packer").startup(function (use)
 		"windwp/nvim-autopairs",
 		config = require "plugins.nv-autopairs"
 	}
-	use {"windwp/nvim-ts-autotag"}
+	use {
+    "windwp/nvim-ts-autotag"
+  }
 
 	--- STARTIFY ---
-	use {"mhinz/vim-startify"}
+	use {
+    "mhinz/vim-startify"
+  }
 
 	--- TELESCOPE ---
 	use {
@@ -87,5 +99,7 @@ require("packer").startup(function (use)
 		"neovim/nvim-lspconfig",
 		config = require "plugins.lsp"
 	}
-	use {"kabouzeid/nvim-lspinstall"}
+	use {
+    "kabouzeid/nvim-lspinstall"
+  }
 end)
