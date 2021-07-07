@@ -35,10 +35,6 @@ local plugins = {
     "alvarosevilla95/luatab.nvim",
     config = require "plugins.nv-luatab"
   },
-	{
-    "kkoomen/vim-doge",
-    run = ":call doge#install()"
-  },
 	{"kyazdani42/nvim-web-devicons"},
 
 	--- TREESITTER ---
