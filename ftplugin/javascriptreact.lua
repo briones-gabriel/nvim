@@ -3,7 +3,7 @@ require("lspconfig").tsserver.setup {
     DATA_PATH .. "/lspinstall/typescript/node_modules/.bin/typescript-language-server",
     "--stdio",
   },
-  filetypes = {"javascript"},
+  filetypes = {"javascriptreact", "javascript.tsx"},
   on_attach = require("plugins.lsp.on_attatch"),
   root_dir = require("lspconfig/util").root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
 }

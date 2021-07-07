@@ -23,6 +23,7 @@ require("telescope").setup {
 				["<esc>"]               = actions.close,
 				["<C-j>"]               = actions.move_selection_next,
 				["<C-k>"]               = actions.move_selection_previous,
+        ["<CR>"]                = actions.select_tab,
 			},
 			n = {
 				["q"]                   = actions.close,
@@ -37,7 +38,7 @@ require("telescope").setup {
 			}
 		},
 		file_sorter                 = require"telescope.sorters".get_fuzzy_file,
-		file_ignore_patterns        = { "**/node_modules/**", "**/.idea/**", "**/.git/**" },
+		file_ignore_patterns        = { "node_modules/.*", ".idea/.*", ".git/.*", "%.env" },
 		generic_sorter              = require"telescope.sorters".get_generic_fuzzy_sorter,
 		shorten_path                = true,
 		winblend                    = 0,

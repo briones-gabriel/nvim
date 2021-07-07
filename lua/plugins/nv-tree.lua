@@ -7,60 +7,53 @@ g.nvim_tree_hide_dotfiles = 1
 g.nvim_tree_git_hl = 1
 g.nvim_tree_add_trailing = 1
 g.nvim_tree_highlight_opened_files = 2
+g.nvim_tree_disable_default_keybindings = 1
 g.nvim_tree_lsp_diagnostics = 0
 g.nvim_tree_width = 30
 g.nvim_tree_follow = 1
 g.nvim_tree_allow_resize = 1
 g.nvim_tree_auto_ignore_ft = { "startify" }
-g.nvim_tree_special_files = {
-    ["application.properties"] = true,
-    Makefile = true,
-    ["README.md"] = true,
-    ["readme.md"] = true,
-}
-g.nvim_tree_ignore = {
-    ".git",
-    "node_modules",
-    "target"
-}
+g.nvim_tree_ignore = {".git", "node_modules", "target"}
 g.nvim_tree_show_icons = {
-    git = 0,
-    folders = 1,
-    files = 1,
-    folder_arrows = 0
+  git = 0,
+  folders = 1,
+  files = 1,
+  folder_arrows = 0
 }
 g.nvim_tree_icons = {
-    default = "",
-    symlink = "",
-    git = {
-        unstaged = "",
-        staged = "",
-        unmerged = "",
-        renamed = "",
-        untracked = "",
-        deleted = "",
-        ignored = ""
-    },
-    folder = {
-        --arrow_open = "",
-        --arrow_closed = "",
-        --default = "",
-        --open = "",
-        --empty = "",
-        --empty_open = "",
-        --symlink = "",
-        --symlink_open = "",
-        default = "",
-        open = "",
-        empty = "",
-        empty_open = "",
-        symlink = "",
-        symlink_open = "",
-    },
-    lsp = {
-        hint = "",
-        info = "",
-        warning = "",
-        error = ""
-    }
+  default = "",
+  folder = {
+    default = "",
+    open = "",
+    empty = "",
+    empty_open = "",
+    symlink = "",
+    symlink_open = "",
+  },
+}
+
+local tree_cb = require'nvim-tree.config'.nvim_tree_callback
+g.nvim_tree_bindings = {
+  { key = {"<CR>", "o", "<2-LeftMouse>"}, cb = tree_cb("tabnew") },
+  { key = "v",                            cb = tree_cb("vsplit") },
+  { key = "x",                            cb = tree_cb("split") },
+  { key = "<C-b>",                        cb = tree_cb("edit") },
+  { key = "<",                            cb = tree_cb("prev_sibling") },
+  { key = ">",                            cb = tree_cb("next_sibling") },
+  { key = "P",                            cb = tree_cb("parent_node") },
+  { key = "<Tab>",                        cb = tree_cb("preview") },
+  { key = "K",                            cb = tree_cb("first_sibling") },
+  { key = "J",                            cb = tree_cb("last_sibling") },
+  { key = "I",                            cb = tree_cb("toggle_ignored") },
+  { key = "H",                            cb = tree_cb("toggle_dotfiles") },
+  { key = "R",                            cb = tree_cb("refresh") },
+  { key = "a",                            cb = tree_cb("create") },
+  { key = "d",                            cb = tree_cb("remove") },
+  { key = "r",                            cb = tree_cb("rename") },
+  { key = "<C-r>",                        cb = tree_cb("full_rename") },
+  { key = "x",                            cb = tree_cb("close_node") },
+  { key = "y",                            cb = tree_cb("copy_name") },
+  { key = "Y",                            cb = tree_cb("copy_path") },
+  { key = "gy",                           cb = tree_cb("copy_absolute_path") },
+  { key = "q",                            cb = tree_cb("close") },
 }

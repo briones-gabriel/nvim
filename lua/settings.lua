@@ -41,12 +41,10 @@ opt.signcolumn      = "yes"                                                    -
 
 --- TABS ---
 opt.shiftwidth      = 2                                                        --- Change a number of space characeters inseted for indentation
-opt.shiftwidth      = 2                                                        --- Change a number of space characeters inseted for indentation
 opt.showtabline     = 2                                                        --- Always show tabs
 opt.tabstop         = 2                                                        --- Insert 2 spaces for a tab
-opt.tabstop         = 2                                                        --- Insert 2 spaces for a tab
 opt.softtabstop     = 2                                                        --- Insert 2 spaces for a tab
-opt.softtabstop     = 2                                                        --- Insert 2 spaces for a tab
+opt.expandtab       = true
 opt.autoindent      = true                                                     --- Good auto indent
 
 --- LEADER KEY ---

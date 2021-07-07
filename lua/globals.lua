@@ -2,6 +2,7 @@
 _G.PATH       = vim.fn.stdpath("config")
 _G.DATA_PATH = vim.fn.stdpath "data"
 _G.opts       = { noremap = true, silent = true, expr = false }
+_G.optns      = { noremap = true, silent = true }
 _G.opt        = vim.opt
 _G.g          = vim.g
 _G.cmd        = vim.cmd

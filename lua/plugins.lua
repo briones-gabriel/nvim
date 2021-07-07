@@ -31,13 +31,15 @@ local plugins = {
 		"kyazdani42/nvim-tree.lua",
 		config = require "plugins.nv-tree",
 	},
-	{"kyazdani42/nvim-web-devicons"},
-	{"kkoomen/vim-doge", run = ":call doge#install()"},
-	{"tjdevries/astronauta.nvim"},
+  {
+    "alvarosevilla95/luatab.nvim",
+    config = require "plugins.nv-luatab"
+  },
 	{
-		"akinsho/nvim-bufferline.lua",
-		config = require "plugins.nv-bufferline"
-	},
+    "kkoomen/vim-doge",
+    run = ":call doge#install()"
+  },
+	{"kyazdani42/nvim-web-devicons"},
 
 	--- TREESITTER ---
 	{
@@ -78,18 +80,17 @@ local plugins = {
 		"neovim/nvim-lspconfig",
 		config = require "plugins.lsp",
 	},
-	{
-		"glepnir/lspsaga.nvim",
-		config = require "plugins.nv-lspsaga",
-	},
 	{"kabouzeid/nvim-lspinstall"},
 }
 
 --- PACKER PLUGINS MANAGEMENT ---
 local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
+
 if fn.empty(fn.glob(install_path)) > 0 then
 	fn.system({"git", "clone", "https://github.com/wbthomason/packer.nvim", install_path})
 	vim.api.nvim_command("packadd packer.nvim")
 end
 
-require("packer").startup(function (use) use (plugins) end)
+require("packer").startup(function (use)
+  use(plugins)
+end)
