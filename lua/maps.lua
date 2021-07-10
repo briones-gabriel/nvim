@@ -24,13 +24,13 @@ map("n",    "<C-h>",        ":tabprev<CR>")
 map("n",    "<C-w>",        ":tabclose<CR>")
 
 -- TELESCOPE ---
-map("n",    "<Leader>f",   ":lua require('telescope.builtin').find_files({ previewer = false })<CR>")
+map("n",    ";f",   ":lua require('telescope.builtin').find_files({ previewer = false })<CR>")
 
 -- GIT ---
-map("n",    "<Leader>gs",   ":G<CR>")
-map("n",    "<Leader>gpl",  ":G pull<CR>")
-map("n",    "<Leader>gps",  ":G push<CR>")
-map("n",    "<Leader>gc",   ":G commit<CR>")
-map("n",    "<Leader>ga",   ":Git add .<CR>")
-map("n",    "<Leader>gh",   ":diffget //2<CR>")
-map("n",    "<Leader>gl",   ":diffget //3<CR>")
+map("n",    ";gs",   ":G<CR>")
+map("n",    ";gpl",  ":G pull<CR>")
+map("n",    ";gps",  ":G push<CR>")
+map("n",    ";gc",   ":G commit<CR>")
+map("n",    ";ga",   ":Git add .<CR>")
+map("n",    ";gh",   ":diffget //2<CR>")
+map("n",    ";gl",   ":diffget //3<CR>")
