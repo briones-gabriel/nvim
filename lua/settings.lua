@@ -26,13 +26,12 @@ opt.scrolloff       = 4                                                        -
 opt.sidescrolloff   = 4                                                        --- Lines to scroll horizontally
 opt.cmdheight       = 1    				                                             --- Give more space for displaying messages
 opt.conceallevel    = 0                                                        --- so that `` is visible in markdown files
-opt.undodir         = PATH .. "/utils/.undo"                                    --- Dir for undos
+opt.undodir         = PATH .. "/utils/.undo"                                   --- Dir for undos
 opt.completeopt     = {"menuone", "noselect"}                                  --- Recommended by nvim-compe
 opt.wildignore      = {"**/node_modules/**", "**/.idea/**", "**/.git/**"}      --- Don't search inside Node.js modules (works for gutentag)
 opt.clipboard       = {"unnamed", "unnamedplus"}                               --- Copy-paste between vim and everything else
 opt.backspace       = {"indent", "eol", "start"}                               --- Making sure backspace works
 opt.fillchars       = {eob = " "}                                              --- Hides unnecessary characters
-opt.foldmethod      = "indent"
 opt.fileencoding    = "utf-8"                                                  --- The enconding written to a file
 opt.encoding        = "utf-8"                                                  --- The encoding displayed
 opt.colorcolumn     = "120"                                                    --- Sets the color column distance
