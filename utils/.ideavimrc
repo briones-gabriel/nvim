@@ -3,6 +3,11 @@ let mapleader=" "
 
 """ Plugins ---------------------------------
 set NERDTree
+set argtextobj
+set textobj-entire
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
 
 """ Common settings -------------------------
 set number
@@ -11,13 +16,11 @@ set clipboard=unnamedplus
 set clipboard+=ideaput
 set showmode
 set ruler
-set so=5
+set so=4
 set incsearch
 set nu
-set scrolloff=4
 map Q gq
 set showmatch
-set hidden
 
 """ Idea specific settings ------------------
 set ideajoin
@@ -29,26 +32,27 @@ set ideamarks
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 
-:map ,d <Action>(Debug)
-:map ,s <Action>(Stop)
-:map ,r <Action>(Run)
+:map ;d <Action>(Debug)
+:map ;s <Action>(Stop)
+:map ;r <Action>(Run)
 
-:map <leader>T <Action>(TabsActions)
 :map <C-l> <Action>(NextTab)
 :map <C-h> <Action>(PreviousTab)
 
-:map <leader>u <Action>(FindUsages)
-:map <leader>f <Action>(GotoFile)
-:map <leader>rn <Action>(RenameElement)
-:map <leader>oi <Action>(OptimizeImports)
-:map <leader>c <Action>(GotoClass)
+:map ;r <Action>(RenameElement)
+:map <leader>fm <Action>(RemformatCode)
+:map gu <Action>(FindUsages)
+:map ;f <Action>(GotoFile) # Fuzzyfind
+:map gc <Action>(GotoClass)
+:map gne <Action>(GotoNextError)
 :map <leader>e <Action>(ShowErrorDescription)
+:map ;d <Action>(QuickJavaDoc)
 
 :map <leader>k <Action>(ToggleFullScreen)
-:map <leader>ot <Action>(ActivateTerminalToolWindow)
+:map ;t <Action>(ActivateTerminalToolWindow)
 
 :map <leader>t :NERDTreeFind<CR>
 
 :map <leader>/ <Action>(CommentByLineComment)
-:map <S-k> <Action>(MoveLineUp)
-:map <S-j> <Action>(MoveLineDown)
+:vmap <S-k> <Action>(MoveLineUp)
+:vmap <S-j> <Action>(MoveLineDown)
