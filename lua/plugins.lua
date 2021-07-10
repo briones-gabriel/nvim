@@ -10,102 +10,102 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 require("packer").startup(function (use)
-	--- PACKER ---
-	use {
+  --- PACKER ---
+  use {
     "wbthomason/packer.nvim"
   }
 
-	--- COLORSCHEMES ---
-	use {
+  --- COLORSCHEMES ---
+  use {
     "RRethy/nvim-base16"
   }
   use {
     "doums/darcula"
   }
 
-	--- GIT ---
-	use {
-		"lewis6991/gitsigns.nvim",
-		config = function () require "plugins.nv-gitsigns" end,
-	}
-	use {
+  --- GIT ---
+  use {
+    "lewis6991/gitsigns.nvim",
+    config = function () require "plugins.nv-gitsigns" end,
+  }
+  use {
     "tpope/vim-fugitive"
   }
 
-	--- COMMENTS ---
-	use {
-		"terrortylor/nvim-comment",
-		config = function () require "plugins.nv-comment" end,
-	}
+  --- COMMENTS ---
+  use {
+    "terrortylor/nvim-comment",
+    config = function () require "plugins.nv-comment" end,
+  }
 
-	--- CORE PLUGINS ---
-	use {
-		"hoob3rt/lualine.nvim",
-		config = function () require "plugins.nv-lualine" end,
-	}
-	use {
-		"lukas-reineke/indent-blankline.nvim",
-		config = function () require "plugins.nv-blankline" end,
-	}
-	use {
-		"kyazdani42/nvim-tree.lua",
-		config = function () require "plugins.nv-tree" end,
-	}
+  --- CORE PLUGINS ---
+  use {
+    "hoob3rt/lualine.nvim",
+    config = function () require "plugins.nv-lualine" end,
+  }
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function () require "plugins.nv-blankline" end,
+  }
+  use {
+    "kyazdani42/nvim-tree.lua",
+    config = function () require "plugins.nv-tree" end,
+  }
   use {
     "alvarosevilla95/luatab.nvim",
     config = function () require "plugins.nv-luatab" end,
   }
-	use {
+  use {
     "kyazdani42/nvim-web-devicons"
   }
   use {
     "tjdevries/astronauta.nvim"
   }
 
-	--- TREESITTER ---
-	use {
-		"nvim-treesitter/nvim-treesitter",
-		config = function () require "plugins.nv-treesitter" end,
-		run = ":TSUpdate",
-	}
-	use {
-		"windwp/nvim-autopairs",
-		config = function () require "plugins.nv-autopairs" end,
-	}
-	use {
+  --- TREESITTER ---
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    config = function () require "plugins.nv-treesitter" end,
+    run = ":TSUpdate",
+  }
+  use {
+    "windwp/nvim-autopairs",
+    config = function () require "plugins.nv-autopairs" end,
+  }
+  use {
     "windwp/nvim-ts-autotag"
   }
 
-	--- STARTIFY ---
-	use {
+  --- STARTIFY ---
+  use {
     "mhinz/vim-startify"
   }
 
-	--- TELESCOPE ---
-	use {
-		"nvim-telescope/telescope.nvim",
-		config = function () require "plugins.nv-telescope" end,
-		requires = {
-			{"nvim-lua/popup.nvim"},
-			{"nvim-lua/plenary.nvim"},
-			{"nvim-telescope/telescope-fzy-native.nvim"},
-		}
-	}
+  --- TELESCOPE ---
+  use {
+    "nvim-telescope/telescope.nvim",
+    config = function () require "plugins.nv-telescope" end,
+    requires = {
+      {"nvim-lua/popup.nvim"},
+      {"nvim-lua/plenary.nvim"},
+      {"nvim-telescope/telescope-fzy-native.nvim"},
+    }
+  }
 
-	--- LSP ---
-	use {
-		"hrsh7th/vim-vsnip",
-		config = function () require "plugins.nv-vsnip" end,
-	}
-	use {
-		"hrsh7th/nvim-compe",
-		config = function () require "plugins.nv-compe" end,
-	}
-	use {
-		"neovim/nvim-lspconfig",
-		config = function () require "plugins.lsp" end,
-	}
-	use {
+  --- LSP ---
+  use {
+    "hrsh7th/vim-vsnip",
+    config = function () require "plugins.nv-vsnip" end,
+  }
+  use {
+    "hrsh7th/nvim-compe",
+    config = function () require "plugins.nv-compe" end,
+  }
+  use {
+    "neovim/nvim-lspconfig",
+    config = function () require "plugins.lsp" end,
+  }
+  use {
     "kabouzeid/nvim-lspinstall"
   }
 end)

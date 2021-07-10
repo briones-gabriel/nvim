@@ -51,8 +51,8 @@ vim.g.mapleader = " "
 vim.b.mapleader = " "
 
 --- FUNCTIONS ---
-cmd("set termguicolors")
-cmd("colorscheme darcula")
+--cmd("set termguicolors")
+cmd("colorscheme base16-gruvbox-dark-soft")
 cmd("filetype plugin indent on")
 cmd("set shortmess+=c")                                                        --- " Don't pass messages to |ins-completion-menu|
 cmd("set formatoptions-=c")                                                    --- " Stop newline continuation of comments
