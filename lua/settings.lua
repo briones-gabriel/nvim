@@ -32,7 +32,7 @@ opt.wildignore      = {"**/node_modules/**", "**/.idea/**", "**/.git/**"}      -
 opt.clipboard       = {"unnamed", "unnamedplus"}                               --- Copy-paste between vim and everything else
 opt.backspace       = {"indent", "eol", "start"}                               --- Making sure backspace works
 opt.fillchars       = {eob = " "}                                              --- Hides unnecessary characters
-opt.foldmethod      = "indent"
+--opt.foldmethod      = "indent"
 opt.fileencoding    = "utf-8"                                                  --- The enconding written to a file
 opt.encoding        = "utf-8"                                                  --- The encoding displayed
 opt.colorcolumn     = "120"                                                    --- Sets the color column distance

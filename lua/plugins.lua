@@ -105,4 +105,8 @@ require("packer").startup(function (use)
   use {
     "kabouzeid/nvim-lspinstall"
   }
+  use {
+    "RishabhRD/nvim-lsputils",
+    requires = "RishabhRD/popfix",
+  }
 end)

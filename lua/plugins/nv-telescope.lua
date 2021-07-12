@@ -43,7 +43,7 @@ require("telescope").setup {
     path_display                = {"absolute"},
     winblend                    = 0,
     border                      = {},
-    borderchars                 = { "═", "║", "═", "║", "╔", "╗", "╝", "╚" },
+    --borderchars                 = { "═", "║", "═", "║", "╔", "╗", "╝", "╚" },
     color_devicons              = true,
     use_less                    = true,
     set_env                     = nil,
