@@ -5,7 +5,5 @@ require("lspconfig").tsserver.setup {
   },
 	filetypes = { "typescript" },
   on_attach = require("plugins.lsp.on_attatch"),
-  -- This makes sure tsserver is not used for formatting (I prefer prettier)
   root_dir = require("lspconfig/util").root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
-  --settings = { documentFormatting = false },
 }
