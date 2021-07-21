@@ -1,6 +1,6 @@
 require("lualine").setup {
   options = {
-    theme = "auto",
+    theme = "gruvbox",
     lower = true,
   },
   sections = {
