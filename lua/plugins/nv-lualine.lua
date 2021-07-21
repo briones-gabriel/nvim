@@ -1,11 +1,14 @@
+local present, _ = pcall(require, "lualine")
+if not present then
+  return
+end
+
 require("lualine").setup {
   options = {
     theme = "gruvbox",
-    lower = true,
   },
   sections = {
-    lualine_a = { },
-    --lualine_a = { "mode" },
+    lualine_a = { "mode" },
     lualine_b = { "branch" },
     lualine_c = { "filename" },
     lualine_x = { "diff", "filetype" },
